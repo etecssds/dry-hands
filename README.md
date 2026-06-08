@@ -1,4 +1,4 @@
-# codename dry-hands
+# Dry Hands
 
 > **nota:** esse nome é provisório. eu (Michael) coloquei pq lembrei da música do C418 (do Minecraft)
 
