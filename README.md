@@ -4,6 +4,8 @@
 
 ## Introdução
 
+![Capa do livro de Graciliano Ramos](https://m.media-amazon.com/images/I/81XM08cKsYL._AC_SL1500_.jpg)
+
 A obra “Vidas Secas", de Graciliano Ramos, é um clássico da literatura brasileira e conta a história de uma família e sua migração durante os períodos de seca.
 
 Nosso projeto é um jogo inspirado nos acontecimentos, personagens e desafios presentes no livro. A proposta busca incentivar a interpretação textual e a compreensão dos temas apresentados pelo autor ao longo da obra.
