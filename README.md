@@ -18,4 +18,11 @@ Nosso projeto é um jogo inspirado nos acontecimentos, personagens e desafios pr
 | **Renderer**    | OpenGL ES 3         |
 | **Plataformas** | PC, Android e WebGL |
 
+## Licença e Direitos Autorais
+
+Este projeto é de código aberto (open source) e utiliza licenças diferentes para o código-fonte e para os recursos visuais/sonoros:
+
+* **Código-Fonte:** Licenciado sob a [GNU GPLv3](LICENSE). Você pode modificar e redistribuir o código, desde que qualquer projeto derivado também seja mantido sob a GPLv3.
+* **Recursos Visuais e Sonoros (Assets):** Licenciados sob a [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](LICENSE-ASSETS). Você pode compartilhar e adaptar as artes e músicas, desde que dê os créditos aos autores originais e distribua suas modificações sob a mesma licença.
+
 
