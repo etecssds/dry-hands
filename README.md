@@ -10,8 +10,10 @@ Nosso projeto é um jogo inspirado nos acontecimentos, personagens e desafios pr
 
 ## Informações técnicas
 
-| Engine | Godot 4.6 |
-| Renderer | OpenGL ES 3 |
+|             |                     |
+|-------------|---------------------|
+| Engine      | Godot 4.6           |
+| Renderer    | OpenGL ES 3         |
 | Plataformas | PC, Android e WebGL |
 
 
