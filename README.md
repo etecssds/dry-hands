@@ -10,7 +10,7 @@ A obra “Vidas Secas", de Graciliano Ramos, é um clássico da literatura brasi
 
 Nosso projeto é um jogo inspirado nos acontecimentos, personagens e desafios presentes no livro. A proposta busca incentivar a interpretação textual e a compreensão dos temas apresentados pelo autor ao longo da obra.
 
-## Informações técnicas
+## Informações Técnicas
 
 |                 |                     |
 |-----------------|---------------------|
