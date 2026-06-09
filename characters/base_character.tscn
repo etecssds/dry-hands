@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://b0jaggxkwbusd"]
+
+[ext_resource type="Texture2D" uid="uid://doljup8bs3eet" path="res://characters/amogus.png" id="1_f78fl"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xeerb"]
+radius = 3.0
+height = 12.0
+
+[node name="BodyCharacter" type="CharacterBody2D" unique_id=1240929559]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=204840225]
+position = Vector2(0, -7)
+texture = ExtResource("1_f78fl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1242892702]
+show_behind_parent = true
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_xeerb")

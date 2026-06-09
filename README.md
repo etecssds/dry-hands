@@ -26,5 +26,3 @@ Este projeto é de código aberto (open source) e utiliza licenças diferentes p
 
 - **Código-Fonte:** Licenciado sob a [GNU GPLv3](LICENSE). Você pode modificar e redistribuir o código, desde que qualquer projeto derivado também seja mantido sob a GPLv3.
 - **Recursos Visuais e Sonoros (Assets):** Licenciados sob a [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](LICENSE-ASSETS). Você pode compartilhar e adaptar as artes e músicas, desde que dê os créditos aos autores originais e distribua suas modificações sob a mesma licença.
-
-
