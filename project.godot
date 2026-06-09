@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="dry hands"
+config/name="Dry Hands"
 run/main_scene="uid://cowqbmtwqhy7a"
 config/features=PackedStringArray("4.6", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="uid://be2766cq3on6f"
 
 [display]
 
