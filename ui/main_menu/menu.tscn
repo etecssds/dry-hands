@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://g3ocokqvhctd"]
 
 [ext_resource type="Texture2D" uid="uid://dys1j1xuhetiq" path="res://assets/ground.png" id="1_ffury"]
-[ext_resource type="Script" uid="uid://dhqlecnqiwn28" path="res://interface/main_menu/menu.gd" id="1_l0rnf"]
-[ext_resource type="Texture2D" uid="uid://dneinntia14cc" path="res://interface/main_menu/hands.png" id="2_ss2k5"]
+[ext_resource type="Script" uid="uid://dhqlecnqiwn28" path="res://ui/main_menu/menu.gd" id="1_l0rnf"]
+[ext_resource type="Texture2D" uid="uid://dneinntia14cc" path="res://assets/ui/hands.png" id="2_ss2k5"]
 [ext_resource type="FontFile" uid="uid://ct0qnxydyhaa" path="res://assets/fonts/quaver.ttf" id="3_ffury"]
-[ext_resource type="Texture2D" uid="uid://d1xdeu1wrym1i" path="res://interface/main_menu/menu_container.png" id="4_y5q51"]
-[ext_resource type="Texture2D" uid="uid://4rf1hundvoey" path="res://interface/main_menu/menu_item.png" id="5_ffury"]
+[ext_resource type="Texture2D" uid="uid://d1xdeu1wrym1i" path="res://assets/ui/menu_container.png" id="4_y5q51"]
+[ext_resource type="Texture2D" uid="uid://4rf1hundvoey" path="res://assets/ui/menu_item.png" id="5_ffury"]
 [ext_resource type="FontFile" uid="uid://i3itppdqun3j" path="res://assets/fonts/Not Jam Chunky Sans 9.ttf" id="6_ss2k5"]
-[ext_resource type="Texture2D" uid="uid://ckdwrhtdafm15" path="res://interface/main_menu/cog.png" id="7_y5q51"]
-[ext_resource type="Texture2D" uid="uid://d4jo7rbenwbkj" path="res://interface/main_menu/cog_hover.png" id="8_j5m7n"]
-[ext_resource type="Texture2D" uid="uid://dv05uyxomqxsq" path="res://interface/main_menu/close.png" id="10_p6own"]
-[ext_resource type="Texture2D" uid="uid://cxv8ssk6b30vv" path="res://interface/main_menu/close_hover.png" id="11_rpfq7"]
+[ext_resource type="Texture2D" uid="uid://ckdwrhtdafm15" path="res://assets/ui/cog.png" id="7_y5q51"]
+[ext_resource type="Texture2D" uid="uid://d4jo7rbenwbkj" path="res://assets/ui/cog_hover.png" id="8_j5m7n"]
+[ext_resource type="Texture2D" uid="uid://dv05uyxomqxsq" path="res://assets/ui/close.png" id="10_p6own"]
+[ext_resource type="Texture2D" uid="uid://cxv8ssk6b30vv" path="res://assets/ui/close_hover.png" id="11_rpfq7"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_d1iul"]
 font = ExtResource("3_ffury")
@@ -241,7 +241,7 @@ offset_right = -8.0
 offset_bottom = -8.0
 grow_horizontal = 0
 grow_vertical = 0
-text = "Versão A0.1"
+text = "Versão A0.2"
 label_settings = SubResource("LabelSettings_1may8")
 horizontal_alignment = 2
 vertical_alignment = 2
