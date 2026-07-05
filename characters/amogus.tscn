@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://doljup8bs3eet" path="res://characters/amogus.png" id="2_fpln6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5xh0r"]
-radius = 2.0
-height = 12.0
+radius = 3.0
+height = 8.0
 
 [sub_resource type="Animation" id="Animation_0rbtg"]
 length = 0.001
@@ -66,15 +66,19 @@ _data = {
 [node name="amogus" unique_id=1240929559 instance=ExtResource("1_55lds")]
 
 [node name="Sprite" parent="." index="0" unique_id=204840225]
+position = Vector2(-0.5, -8)
 texture = ExtResource("2_fpln6")
 hframes = 6
 vframes = 2
 
 [node name="Collision" parent="." index="1" unique_id=1242892702]
 visible = false
+show_behind_parent = false
 position = Vector2(0, -1)
 shape = SubResource("CapsuleShape2D_5xh0r")
 
 [node name="Animation" parent="." index="2" unique_id=549782095]
 libraries/ = SubResource("AnimationLibrary_qenwo")
 autoplay = &"idle"
+
+[node name="Camera2D" type="Camera2D" parent="." index="3" unique_id=284584765]
