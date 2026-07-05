@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dxcmtxgs58d7o"]
+
+[ext_resource type="PackedScene" uid="uid://cmnfjg13ow7bl" path="res://scenes/cena.tscn" id="1_cp3vr"]
+[ext_resource type="PackedScene" uid="uid://cl2fk5q11iwns" path="res://characters/amogus.tscn" id="2_fyo3i"]
+
+[node name="GameLevel" type="Node2D" unique_id=2116533260]
+
+[node name="Node2D" parent="." unique_id=163271074 instance=ExtResource("1_cp3vr")]
+
+[node name="amogus" parent="." unique_id=1240929559 instance=ExtResource("2_fyo3i")]
+position = Vector2(106, 21)
