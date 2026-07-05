@@ -1,0 +1,316 @@
+[gd_scene format=3 uid="uid://g3ocokqvhctd"]
+
+[ext_resource type="Texture2D" uid="uid://dys1j1xuhetiq" path="res://assets/ground.png" id="1_ffury"]
+[ext_resource type="Script" uid="uid://dhqlecnqiwn28" path="res://interface/main_menu/menu.gd" id="1_l0rnf"]
+[ext_resource type="Texture2D" uid="uid://dneinntia14cc" path="res://interface/main_menu/hands.png" id="2_ss2k5"]
+[ext_resource type="FontFile" uid="uid://ct0qnxydyhaa" path="res://assets/fonts/quaver.ttf" id="3_ffury"]
+[ext_resource type="Texture2D" uid="uid://d1xdeu1wrym1i" path="res://interface/main_menu/menu_container.png" id="4_y5q51"]
+[ext_resource type="Texture2D" uid="uid://4rf1hundvoey" path="res://interface/main_menu/menu_item.png" id="5_ffury"]
+[ext_resource type="FontFile" uid="uid://i3itppdqun3j" path="res://assets/fonts/Not Jam Chunky Sans 9.ttf" id="6_ss2k5"]
+[ext_resource type="Texture2D" uid="uid://ckdwrhtdafm15" path="res://interface/main_menu/cog.png" id="7_y5q51"]
+[ext_resource type="Texture2D" uid="uid://d4jo7rbenwbkj" path="res://interface/main_menu/cog_hover.png" id="8_j5m7n"]
+[ext_resource type="Texture2D" uid="uid://dv05uyxomqxsq" path="res://interface/main_menu/close.png" id="10_p6own"]
+[ext_resource type="Texture2D" uid="uid://cxv8ssk6b30vv" path="res://interface/main_menu/close_hover.png" id="11_rpfq7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_d1iul"]
+font = ExtResource("3_ffury")
+font_size = 36
+font_color = Color(0.9137255, 0.84313726, 0.69803923, 1)
+shadow_size = 0
+shadow_offset = Vector2(0, 2)
+stacked_shadow_count = 2
+stacked_shadow_0/offset = Vector2(0, 2)
+stacked_shadow_0/color = Color(0.5254902, 0.6, 0.6431373, 1)
+stacked_shadow_1/offset = Vector2(0, 2)
+stacked_shadow_1/color = Color(0.14509805, 0.11764706, 0.05882353, 1)
+stacked_shadow_1/outline_size = 4
+
+[sub_resource type="LabelSettings" id="LabelSettings_l0rnf"]
+font = ExtResource("6_ss2k5")
+font_size = 18
+font_color = Color(0.9137255, 0.84313726, 0.69803923, 1)
+shadow_size = 0
+shadow_color = Color(0.5019608, 0.57254905, 0.6117647, 1)
+shadow_offset = Vector2(0, 2)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1may8"]
+font = ExtResource("6_ss2k5")
+font_size = 9
+font_color = Color(0.89411765, 0.8235294, 0.68235296, 1)
+shadow_size = 0
+shadow_color = Color(0.49019608, 0.56078434, 0.59607846, 1)
+shadow_offset = Vector2(0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ibi8t"]
+font = ExtResource("6_ss2k5")
+font_size = 18
+font_color = Color(0.9137255, 0.84313726, 0.69803923, 1)
+shadow_size = 0
+shadow_color = Color(0.49019608, 0.56078434, 0.59607846, 1)
+shadow_offset = Vector2(0, 2)
+
+[sub_resource type="LabelSettings" id="LabelSettings_41qlw"]
+font = ExtResource("6_ss2k5")
+font_size = 9
+font_color = Color(0.9137255, 0.84313726, 0.69803923, 1)
+shadow_size = 0
+shadow_color = Color(0.47843137, 0.54901963, 0.5803922, 1)
+shadow_offset = Vector2(0, 1)
+
+[node name="MainMenu" type="Control" unique_id=1994593722]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l0rnf")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1669074208]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ffury")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="BackgroundFilter" type="ColorRect" parent="." unique_id=667985738]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.68235296, 0.45882353, 0.2901961, 0.64705884)
+
+[node name="BigLogo" type="TextureRect" parent="." unique_id=707323855]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -96.0
+offset_top = 3.0
+offset_right = 96.0
+offset_bottom = 99.0
+grow_horizontal = 2
+texture = ExtResource("2_ss2k5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Title" type="Label" parent="BigLogo" unique_id=340960107]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -108.0
+offset_top = -22.5
+offset_right = 108.0
+offset_bottom = 22.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "DRY HANDS"
+label_settings = SubResource("LabelSettings_d1iul")
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="MenuContainer" type="NinePatchRect" parent="." unique_id=1942452217]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -152.0
+offset_top = -113.0
+offset_right = 152.0
+offset_bottom = -44.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("4_y5q51")
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 1
+patch_margin_bottom = 1
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuContainer" unique_id=182067193]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.5
+offset_top = 5.0
+offset_right = -4.5
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="PlayButton" type="NinePatchRect" parent="MenuContainer/VBoxContainer" unique_id=1387868126]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 0
+texture = ExtResource("5_ffury")
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 1
+patch_margin_bottom = 1
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="Label" type="Label" parent="MenuContainer/VBoxContainer/PlayButton" unique_id=25977033]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -29.0
+offset_top = -13.75
+offset_right = 29.0
+offset_bottom = 9.25
+grow_horizontal = 2
+grow_vertical = 2
+text = "JOGAR"
+label_settings = SubResource("LabelSettings_l0rnf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExitButton" type="NinePatchRect" parent="MenuContainer/VBoxContainer" unique_id=1253009560]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 0
+texture = ExtResource("5_ffury")
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 1
+patch_margin_bottom = 1
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="Label" type="Label" parent="MenuContainer/VBoxContainer/ExitButton" unique_id=1913026842]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -13.5
+offset_right = 22.0
+offset_bottom = 9.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "SAIR"
+label_settings = SubResource("LabelSettings_l0rnf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CreditsButton" type="TextureButton" parent="." unique_id=1305179330 groups=["buttons"]]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -24.0
+offset_top = -36.0
+offset_right = -8.0
+offset_bottom = -20.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("7_y5q51")
+texture_hover = ExtResource("8_j5m7n")
+
+[node name="Version" type="Label" parent="." unique_id=514296865]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -98.0
+offset_top = -17.0
+offset_right = -8.0
+offset_bottom = -8.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Versão A0.1"
+label_settings = SubResource("LabelSettings_1may8")
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="CreditsContainer" type="ColorRect" parent="." unique_id=626498129]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.8156863)
+
+[node name="CreditsTitle" type="Label" parent="CreditsContainer" unique_id=4365369]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -65.5
+offset_top = 8.0
+offset_right = 65.5
+offset_bottom = 35.0
+grow_horizontal = 2
+text = "CRÉDITOS"
+label_settings = SubResource("LabelSettings_ibi8t")
+horizontal_alignment = 1
+
+[node name="Credits" type="Label" parent="CreditsContainer" unique_id=176951738]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -143.0
+offset_top = -78.0
+offset_right = 143.0
+offset_bottom = 101.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Este jogo foi produzido com muito carinho e dedicação em São Sebastião - SP.
+
+Obra original por Graciliano Ramos
+
+Roteiro:
+Danilo Santana da Silva
+
+Programação:
+João Gabriel Andrade Sacchi
+Michael Breno Oliveira de Paiva
+Samuell Lorem Ipsum
+
+Artes visuais:
+Heitor Marmo Nascimento de Andrade
+Matheus Vinnicius Lima"
+label_settings = SubResource("LabelSettings_41qlw")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="QuitCreditsButton" type="TextureButton" parent="CreditsContainer" unique_id=633664609 groups=["buttons"]]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -24.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = 24.0
+grow_horizontal = 0
+texture_normal = ExtResource("10_p6own")
+texture_hover = ExtResource("11_rpfq7")
