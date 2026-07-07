@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://boqywkmetjl36"]
+
+[ext_resource type="Script" uid="uid://c4hgl3tjdq38t" path="res://ui/credits.gd" id="1_1bagf"]
+[ext_resource type="FontFile" uid="uid://i3itppdqun3j" path="res://assets/fonts/Not Jam Chunky Sans 9.ttf" id="1_74u3g"]
+[ext_resource type="Texture2D" uid="uid://dv05uyxomqxsq" path="res://assets/ui/close.png" id="2_1bagf"]
+[ext_resource type="Texture2D" uid="uid://cxv8ssk6b30vv" path="res://assets/ui/close_hover.png" id="3_icdkc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ibi8t"]
+font = ExtResource("1_74u3g")
+font_size = 18
+font_color = Color(0.9137255, 0.84313726, 0.69803923, 1)
+shadow_size = 0
+shadow_color = Color(0.49019608, 0.56078434, 0.59607846, 1)
+shadow_offset = Vector2(0, 2)
+
+[sub_resource type="LabelSettings" id="LabelSettings_41qlw"]
+font = ExtResource("1_74u3g")
+font_size = 9
+font_color = Color(0.9137255, 0.84313726, 0.69803923, 1)
+shadow_size = 0
+shadow_color = Color(0.47843137, 0.54901963, 0.5803922, 1)
+shadow_offset = Vector2(0, 1)
+
+[node name="CreditsContainer" type="ColorRect" unique_id=1861495573]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.8156863)
+script = ExtResource("1_1bagf")
+
+[node name="CreditsTitle" type="Label" parent="." unique_id=1095151209]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -65.5
+offset_top = 8.0
+offset_right = 65.5
+offset_bottom = 35.0
+grow_horizontal = 2
+text = "CRÉDITOS"
+label_settings = SubResource("LabelSettings_ibi8t")
+horizontal_alignment = 1
+
+[node name="Credits" type="Label" parent="." unique_id=1313569522]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -143.0
+offset_top = -78.0
+offset_right = 143.0
+offset_bottom = 101.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Este jogo foi produzido com muito carinho e dedicação em São Sebastião - SP.
+
+Obra original por Graciliano Ramos
+
+Roteiro:
+Danilo Santana da Silva
+
+Programação:
+João Gabriel Andrade Sacchi
+Michael Breno Oliveira de Paiva
+Samuell Lorem Ipsum
+
+Artes visuais:
+Heitor Marmo Nascimento de Andrade
+Matheus Vinnicius Lima"
+label_settings = SubResource("LabelSettings_41qlw")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="QuitCreditsButton" type="TextureButton" parent="." unique_id=701658728 groups=["buttons"]]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -24.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = 24.0
+grow_horizontal = 0
+texture_normal = ExtResource("2_1bagf")
+texture_hover = ExtResource("3_icdkc")
+
+[connection signal="pressed" from="QuitCreditsButton" to="." method="_on_quit_credits_button_pressed"]

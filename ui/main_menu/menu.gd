@@ -32,7 +32,7 @@ func _on_button_pressed(_event, _button) -> void:
 func _on_real_button_pressed(_button) -> void:
     match _button.name:
         "CreditsButton":
-            $CreditsContainer.show()
+            get_tree().change_scene_to_file("res://ui/credits.tscn")
 
         "QuitCreditsButton":
             $CreditsContainer.hide()
