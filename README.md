@@ -21,9 +21,9 @@ Nosso projeto é um jogo inspirado nos acontecimentos, personagens e desafios pr
 ### Código fonte
 
 1. Instale a [Godot Engine 4.6](https://godotengine.org/download/).
-2. [Baixe o `.zip`](https://github.com/etecssds/dry-hands/archive/refs/heads/main.zip) ou clone este repositório.
+2. [Baixe o `.zip`](https://github.com/etecssds/dry-hands/archive/refs/heads/main.zip) e extraia ou clone este repositório.
 3. Abra a Godot Engine e clique em Importar no canto superior esquerdo.
-4. Selecione o arquivo `.zip` ou a pasta clonada e clique em Importar.
+4. Selecione a pasta `src` e clique em Importar.
 5. Para iniciar o jogo, aperte F5 ou clique no botão Executar Projeto ("play") no canto superior direito.
 
 ## Andamento do projeto
