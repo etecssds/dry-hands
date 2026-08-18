@@ -2,10 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://dys1j1xuhetiq" path="res://assets/ground.png" id="1_ffury"]
 [ext_resource type="Script" uid="uid://dhqlecnqiwn28" path="res://ui/main_menu/menu.gd" id="1_l0rnf"]
-[ext_resource type="Theme" uid="uid://bysvkw6b1cmyg" path="res://ui/theme.tres" id="1_mwrkd"]
+[ext_resource type="Theme" uid="uid://bysvkw6b1cmyg" path="res://ui/ui_theme.tres" id="1_mwrkd"]
 [ext_resource type="Texture2D" uid="uid://dneinntia14cc" path="res://assets/ui/hands.png" id="2_ss2k5"]
 [ext_resource type="Texture2D" uid="uid://d1xdeu1wrym1i" path="res://assets/ui/menu_container.png" id="4_y5q51"]
-[ext_resource type="FontFile" uid="uid://cburfa62w521v" path="res://assets/fonts/alagard.ttf" id="5_h2vfh"]
+[ext_resource type="LabelSettings" uid="uid://bw3ow7if1qx7t" path="res://ui/main_menu/title_label.tres" id="5_0l7lm"]
 [ext_resource type="FontFile" uid="uid://i3itppdqun3j" path="res://assets/fonts/Not Jam Chunky Sans 9.ttf" id="6_ss2k5"]
 [ext_resource type="Texture2D" uid="uid://ckdwrhtdafm15" path="res://assets/ui/cog.png" id="7_y5q51"]
 [ext_resource type="Texture2D" uid="uid://d4jo7rbenwbkj" path="res://assets/ui/cog_hover.png" id="8_j5m7n"]
@@ -17,19 +17,6 @@ font_color = Color(0.89411765, 0.8235294, 0.68235296, 1)
 shadow_size = 0
 shadow_color = Color(0.49019608, 0.56078434, 0.59607846, 1)
 shadow_offset = Vector2(0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_d1iul"]
-font = ExtResource("5_h2vfh")
-font_size = 48
-font_color = Color(0.9137255, 0.84313726, 0.69803923, 1)
-shadow_size = 0
-shadow_offset = Vector2(0, 2)
-stacked_shadow_count = 2
-stacked_shadow_0/offset = Vector2(0, 2)
-stacked_shadow_0/color = Color(0.5254902, 0.6, 0.6431373, 1)
-stacked_shadow_1/offset = Vector2(0, 2)
-stacked_shadow_1/color = Color(0.14509805, 0.11764706, 0.05882353, 1)
-stacked_shadow_1/outline_size = 4
 
 [node name="MainMenu" type="Control" unique_id=1994593722]
 layout_mode = 3
@@ -61,53 +48,29 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.68235296, 0.45882353, 0.2901961, 0.64705884)
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=598820905]
-custom_minimum_size = Vector2(304, 224)
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1647785615]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -152.0
+offset_top = -112.0
+offset_right = 152.0
+offset_bottom = 112.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MainMarginContainer" type="MarginContainer" parent="MarginContainer" unique_id=1647785615]
-layout_mode = 2
-
-[node name="FooterContainer" type="VBoxContainer" parent="MarginContainer/MainMarginContainer" unique_id=394728646]
-layout_mode = 2
-size_flags_vertical = 8
-
-[node name="CreditsButton" type="TextureButton" parent="MarginContainer/MainMarginContainer/FooterContainer" unique_id=1305179330 groups=["buttons"]]
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 8
-texture_normal = ExtResource("7_y5q51")
-texture_hover = ExtResource("8_j5m7n")
-
-[node name="Version" type="Label" parent="MarginContainer/MainMarginContainer/FooterContainer" unique_id=514296865]
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 8
-text = "Versão A0.2"
-label_settings = SubResource("LabelSettings_1may8")
-horizontal_alignment = 2
-vertical_alignment = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainMarginContainer" unique_id=551464900]
+[node name="LogoMenuVBox" type="VBoxContainer" parent="MarginContainer" unique_id=551464900]
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="LogoMargin" type="MarginContainer" parent="MarginContainer/MainMarginContainer/VBoxContainer" unique_id=1125359110]
+[node name="LogoMargin" type="MarginContainer" parent="MarginContainer/LogoMenuVBox" unique_id=1125359110]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="BigLogo" type="TextureRect" parent="MarginContainer/MainMarginContainer/VBoxContainer/LogoMargin" unique_id=707323855]
+[node name="BigLogo" type="TextureRect" parent="MarginContainer/LogoMenuVBox/LogoMargin" unique_id=707323855]
 custom_minimum_size = Vector2(256, 110)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -116,7 +79,7 @@ texture = ExtResource("2_ss2k5")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Title" type="Label" parent="MarginContainer/MainMarginContainer/VBoxContainer/LogoMargin/BigLogo" unique_id=340960107]
+[node name="Title" type="Label" parent="MarginContainer/LogoMenuVBox/LogoMargin/BigLogo" unique_id=340960107]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -130,21 +93,17 @@ offset_bottom = 22.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "DRY HANDS"
-label_settings = SubResource("LabelSettings_d1iul")
+label_settings = ExtResource("5_0l7lm")
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="Separator" type="MarginContainer" parent="MarginContainer/MainMarginContainer/VBoxContainer" unique_id=1046018138]
-custom_minimum_size = Vector2(0, 29)
-layout_mode = 2
-
-[node name="MenuMargin" type="MarginContainer" parent="MarginContainer/MainMarginContainer/VBoxContainer" unique_id=990959849]
+[node name="MenuMargin" type="MarginContainer" parent="MarginContainer/LogoMenuVBox" unique_id=990959849]
 custom_minimum_size = Vector2(256, 64)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
 
-[node name="MenuContainer" type="NinePatchRect" parent="MarginContainer/MainMarginContainer/VBoxContainer/MenuMargin" unique_id=1942452217]
+[node name="MenuContainer" type="NinePatchRect" parent="MarginContainer/LogoMenuVBox/MenuMargin" unique_id=1942452217]
 layout_mode = 2
 size_flags_vertical = 3
 texture = ExtResource("4_y5q51")
@@ -155,7 +114,7 @@ patch_margin_bottom = 1
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MainMarginContainer/VBoxContainer/MenuMargin/MenuContainer" unique_id=182067193]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/LogoMenuVBox/MenuMargin/MenuContainer" unique_id=182067193]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -168,14 +127,49 @@ grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
-[node name="Play" type="Button" parent="MarginContainer/MainMarginContainer/VBoxContainer/MenuMargin/MenuContainer/VBoxContainer" unique_id=1494309480]
+[node name="Play" type="Button" parent="MarginContainer/LogoMenuVBox/MenuMargin/MenuContainer/VBoxContainer" unique_id=1494309480]
 layout_mode = 2
-text = "Jogar"
+size_flags_vertical = 3
+text = "JOGAR"
 
-[node name="Exit" type="Button" parent="MarginContainer/MainMarginContainer/VBoxContainer/MenuMargin/MenuContainer/VBoxContainer" unique_id=908363569]
+[node name="Exit" type="Button" parent="MarginContainer/LogoMenuVBox/MenuMargin/MenuContainer/VBoxContainer" unique_id=908363569]
 layout_mode = 2
-text = "Sair"
+size_flags_vertical = 3
+text = "SAIR"
 
-[connection signal="pressed" from="MarginContainer/MainMarginContainer/FooterContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
-[connection signal="pressed" from="MarginContainer/MainMarginContainer/VBoxContainer/MenuMargin/MenuContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="MarginContainer/MainMarginContainer/VBoxContainer/MenuMargin/MenuContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[node name="FooterContainer" type="VBoxContainer" parent="MarginContainer" unique_id=394728646]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="ButtonContainer" type="HBoxContainer" parent="MarginContainer/FooterContainer" unique_id=191918408]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="CreditsButton" type="TextureButton" parent="MarginContainer/FooterContainer/ButtonContainer" unique_id=1305179330 groups=["buttons"]]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+texture_normal = ExtResource("7_y5q51")
+texture_hover = ExtResource("8_j5m7n")
+
+[node name="SettingsButton" type="TextureButton" parent="MarginContainer/FooterContainer/ButtonContainer" unique_id=1210229923 groups=["buttons"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+texture_normal = ExtResource("7_y5q51")
+texture_hover = ExtResource("8_j5m7n")
+
+[node name="Version" type="Label" parent="MarginContainer/FooterContainer" unique_id=514296865]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+text = "Versão A0.3"
+label_settings = SubResource("LabelSettings_1may8")
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[connection signal="pressed" from="MarginContainer/LogoMenuVBox/MenuMargin/MenuContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/LogoMenuVBox/MenuMargin/MenuContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="MarginContainer/FooterContainer/ButtonContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="MarginContainer/FooterContainer/ButtonContainer/SettingsButton" to="." method="_on_settings_button_pressed"]

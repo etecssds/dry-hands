@@ -1,6 +1,6 @@
 [gd_resource type="Theme" format=3 uid="uid://bysvkw6b1cmyg"]
 
-[ext_resource type="FontFile" uid="uid://i3itppdqun3j" path="res://assets/fonts/Not Jam Chunky Sans 9.ttf" id="1_rqugq"]
+[ext_resource type="FontFile" uid="uid://d3jvo6qsud148" path="res://assets/fonts/Pixuf.ttf" id="1_udl1o"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rqugq"]
 bg_color = Color(0.46666667, 0.38039216, 0.30588236, 1)
@@ -56,7 +56,7 @@ Button/constants/h_separation = 4
 Button/constants/icon_max_width = 0
 Button/constants/outline_size = 0
 Button/font_sizes/font_size = 18
-Button/fonts/font = ExtResource("1_rqugq")
+Button/fonts/font = ExtResource("1_udl1o")
 Button/styles/disabled = SubResource("StyleBoxFlat_rqugq")
 Button/styles/focus = SubResource("StyleBoxFlat_jf26r")
 Button/styles/hover = SubResource("StyleBoxFlat_jf26r")
