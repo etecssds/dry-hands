@@ -1,0 +1,16 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://bw3ow7if1qx7t"]
+
+[ext_resource type="FontFile" uid="uid://cburfa62w521v" path="res://assets/fonts/alagard.ttf" id="1_0t65v"]
+
+[resource]
+font = ExtResource("1_0t65v")
+font_size = 48
+font_color = Color(1, 0.9137255, 0.84313726, 1)
+shadow_size = 0
+shadow_offset = Vector2(0, 2)
+stacked_shadow_count = 2
+stacked_shadow_0/offset = Vector2(0, 2)
+stacked_shadow_0/color = Color(0.5254902, 0.6, 0.6431373, 1)
+stacked_shadow_1/offset = Vector2(0, 2)
+stacked_shadow_1/color = Color(0.14509805, 0.11764706, 0.05882353, 1)
+stacked_shadow_1/outline_size = 4
