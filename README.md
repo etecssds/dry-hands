@@ -12,7 +12,7 @@ Nosso projeto é um jogo inspirado nos acontecimentos, personagens e desafios pr
 
 |                            |                     |
 |----------------------------|---------------------|
-| **Engine**                 | Godot 4.6           |
+| **Engine**                 | Godot 4.7           |
 | **Renderer**               | OpenGL ES 3         |
 | **Plataformas planejadas** | PC, Android e WebGL |
 
@@ -20,7 +20,7 @@ Nosso projeto é um jogo inspirado nos acontecimentos, personagens e desafios pr
 
 ### Código fonte
 
-1. Instale a [Godot Engine 4.6](https://godotengine.org/download/archive/4.6.3-stable/).
+1. Instale a [Godot Engine 4.7](https://godotengine.org/download/).
 2. [Baixe o `.zip`](https://github.com/etecssds/dry-hands/archive/refs/heads/main.zip) e extraia ou clone este repositório.
 3. Abra a Godot Engine e clique em Importar no canto superior esquerdo.
 4. Selecione a pasta `src` e clique em Importar.
