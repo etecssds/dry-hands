@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://ckdwrhtdafm15" path="res://assets/ui/cog.png" id="7_lknku"]
 [ext_resource type="Texture2D" uid="uid://d4jo7rbenwbkj" path="res://assets/ui/cog_hover.png" id="8_u2jyo"]
 [ext_resource type="FontFile" uid="uid://i3itppdqun3j" path="res://assets/fonts/Not Jam Chunky Sans 9.ttf" id="9_bpbph"]
+[ext_resource type="Texture2D" uid="uid://dv05uyxomqxsq" path="res://assets/ui/close.png" id="10_s4pem"]
+[ext_resource type="Texture2D" uid="uid://cxv8ssk6b30vv" path="res://assets/ui/close_hover.png" id="11_xio0d"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1may8"]
 font = ExtResource("9_bpbph")
@@ -23,7 +25,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/path = NodePath("Mask:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -38,7 +40,7 @@ resource_name = "fade_in"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/path = NodePath("Mask:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -52,6 +54,76 @@ tracks/0/keys = {
 _data = {
 &"RESET": SubResource("Animation_qewnw"),
 &"fade_in": SubResource("Animation_db6af")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_ibi8t"]
+font = ExtResource("9_bpbph")
+font_size = 18
+font_color = Color(0.9137255, 0.84313726, 0.69803923, 1)
+shadow_size = 0
+shadow_color = Color(0.49019608, 0.56078434, 0.59607846, 1)
+shadow_offset = Vector2(0, 2)
+
+[sub_resource type="LabelSettings" id="LabelSettings_41qlw"]
+font = ExtResource("9_bpbph")
+font_size = 9
+font_color = Color(0.9137255, 0.84313726, 0.69803923, 1)
+shadow_size = 0
+shadow_color = Color(0.47843137, 0.54901963, 0.5803922, 1)
+shadow_offset = Vector2(0, 1)
+
+[sub_resource type="Animation" id="Animation_s4pem"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_xio0d"]
+resource_name = "fade_in"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_tf5ef"]
+resource_name = "fade_out"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qao3l"]
+_data = {
+&"RESET": SubResource("Animation_s4pem"),
+&"fade_in": SubResource("Animation_xio0d"),
+&"fade_out": SubResource("Animation_tf5ef")
 }
 
 [node name="MainMenu" type="Control" unique_id=1994593722]
@@ -200,12 +272,12 @@ texture_hover = ExtResource("8_u2jyo")
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
-text = "Versão A0.3"
+text = "Versão A0.4"
 label_settings = SubResource("LabelSettings_1may8")
 horizontal_alignment = 2
 vertical_alignment = 2
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1902865244]
+[node name="Mask" type="ColorRect" parent="." unique_id=1902865244]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -218,9 +290,90 @@ color = Color(0.19215687, 0.15686275, 0.12941177, 1)
 libraries/ = SubResource("AnimationLibrary_rkggs")
 autoplay = &"fade_in"
 
+[node name="CreditsContainer" type="Control" parent="." unique_id=450371767]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="CreditsContainer" unique_id=401021667]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.8156863)
+
+[node name="MarginContainer" type="MarginContainer" parent="CreditsContainer" unique_id=870272207]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -152.0
+offset_top = -112.0
+offset_right = 152.0
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CreditsContainer/MarginContainer" unique_id=139889897]
+layout_mode = 2
+
+[node name="CreditsTitle" type="Label" parent="CreditsContainer/MarginContainer/VBoxContainer" unique_id=952979200]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "CRÉDITOS"
+label_settings = SubResource("LabelSettings_ibi8t")
+horizontal_alignment = 1
+
+[node name="QuitCreditsButton" type="TextureButton" parent="CreditsContainer/MarginContainer/VBoxContainer/CreditsTitle" unique_id=4540227 groups=["buttons"]]
+layout_mode = 0
+offset_left = 288.0
+offset_right = 304.0
+offset_bottom = 16.0
+size_flags_horizontal = 8
+size_flags_vertical = 0
+texture_normal = ExtResource("10_s4pem")
+texture_hover = ExtResource("11_xio0d")
+
+[node name="Credits" type="Label" parent="CreditsContainer/MarginContainer/VBoxContainer" unique_id=1473067331]
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+size_flags_vertical = 6
+text = "Este jogo foi produzido com muito carinho e dedicação em São Sebastião - SP.
+
+Obra original por Graciliano Ramos
+
+Roteiro:
+Danilo Santana da Silva
+
+Programação:
+João Gabriel Andrade Sacchi
+Michael Breno Oliveira de Paiva
+Samuell Lorem Ipsum
+
+Artes visuais:
+Heitor Marmo Nascimento de Andrade
+Matheus Vinnicius Lima"
+label_settings = SubResource("LabelSettings_41qlw")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="CreditsTransition" type="AnimationPlayer" parent="CreditsContainer" unique_id=297798650]
+libraries/ = SubResource("AnimationLibrary_qao3l")
+
 [connection signal="pressed" from="MarginContainer/LogoMenuVBox/MenuMargin/MenuContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/LogoMenuVBox/MenuMargin/MenuContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="MarginContainer/FooterContainer/ButtonContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="MarginContainer/FooterContainer/ButtonContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="animation_finished" from="Transition" to="." method="_on_transition_animation_finished"]
-[connection signal="animation_finished" from="Transition" to="." method="_on_animation_player_animation_finished"]
+[connection signal="pressed" from="CreditsContainer/MarginContainer/VBoxContainer/CreditsTitle/QuitCreditsButton" to="." method="_on_quit_credits_button_pressed"]
+[connection signal="animation_finished" from="CreditsContainer/CreditsTransition" to="." method="_on_credits_transition_animation_finished"]
