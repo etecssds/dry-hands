@@ -5,7 +5,7 @@ func _on_transition_animation_finished(_anim_name: StringName) -> void:
 	$Mask.visible = false
 
 func _on_play_pressed() -> void:
-	get_tree().change_scene_to_file("res://levels/game_level.tscn")
+	get_tree().change_scene_to_file("res://levels/level1/level1.tscn")
 
 func _on_exit_pressed() -> void:
 	get_tree().quit()

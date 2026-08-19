@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cl2fk5q11iwns"]
 
 [ext_resource type="PackedScene" uid="uid://b0jaggxkwbusd" path="res://characters/base_character.tscn" id="1_55lds"]
-[ext_resource type="Texture2D" uid="uid://doljup8bs3eet" path="res://characters/amogus.png" id="2_fpln6"]
+[ext_resource type="Texture2D" uid="uid://doljup8bs3eet" path="res://assets/characters/amogus/amogus.png" id="2_fpln6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5xh0r"]
 radius = 3.0
