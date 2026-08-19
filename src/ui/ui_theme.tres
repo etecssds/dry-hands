@@ -39,13 +39,13 @@ anti_aliasing = false
 
 [resource]
 Button/colors/font_color = Color(1, 0.9137255, 0.84313726, 1)
-Button/colors/font_disabled_color = Color(0.7372549, 0.67058825, 0.61960787, 1)
+Button/colors/font_disabled_color = Color(0.5764706, 0.61960787, 0.6392157, 1)
 Button/colors/font_focus_color = Color(0.60784316, 0.42352942, 0.27450982, 1)
 Button/colors/font_hover_color = Color(0.60784316, 0.42352942, 0.27450982, 1)
 Button/colors/font_hover_pressed_color = Color(0.46666667, 0.38039216, 0.30588236, 1)
-Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_outline_color = Color(0.19215687, 0.15686275, 0.12941177, 1)
 Button/colors/font_pressed_color = Color(0.19215687, 0.15686275, 0.12941177, 1)
-Button/colors/icon_disabled_color = Color(0.7372549, 0.67058825, 0.61960787, 1)
+Button/colors/icon_disabled_color = Color(0.5764706, 0.61960787, 0.6392157, 1)
 Button/colors/icon_focus_color = Color(0.60784316, 0.42352942, 0.27450982, 1)
 Button/colors/icon_hover_color = Color(0.60784316, 0.42352942, 0.27450982, 1)
 Button/colors/icon_hover_pressed_color = Color(0.46666667, 0.38039216, 0.30588236, 1)

@@ -6,11 +6,13 @@
 [ext_resource type="Texture2D" uid="uid://dneinntia14cc" path="res://assets/ui/hands.png" id="4_xio0d"]
 [ext_resource type="LabelSettings" uid="uid://bw3ow7if1qx7t" path="res://ui/main_menu/title_label.tres" id="5_tf5ef"]
 [ext_resource type="Texture2D" uid="uid://d1xdeu1wrym1i" path="res://assets/ui/menu_container.png" id="6_qao3l"]
-[ext_resource type="Texture2D" uid="uid://ckdwrhtdafm15" path="res://assets/ui/cog.png" id="7_lknku"]
-[ext_resource type="Texture2D" uid="uid://d4jo7rbenwbkj" path="res://assets/ui/cog_hover.png" id="8_u2jyo"]
+[ext_resource type="Texture2D" uid="uid://6buh1nsjesoq" path="res://assets/ui/credits/credits.png" id="7_tf5ef"]
+[ext_resource type="Texture2D" uid="uid://b85rmo76llc08" path="res://assets/ui/credits/credits_pressed.png" id="8_qao3l"]
 [ext_resource type="FontFile" uid="uid://i3itppdqun3j" path="res://assets/fonts/Not Jam Chunky Sans 9.ttf" id="9_bpbph"]
-[ext_resource type="Texture2D" uid="uid://dv05uyxomqxsq" path="res://assets/ui/close.png" id="10_s4pem"]
-[ext_resource type="Texture2D" uid="uid://cxv8ssk6b30vv" path="res://assets/ui/close_hover.png" id="11_xio0d"]
+[ext_resource type="Texture2D" uid="uid://st182s56uj6o" path="res://assets/ui/credits/credits_hover.png" id="9_lknku"]
+[ext_resource type="Texture2D" uid="uid://dv05uyxomqxsq" path="res://assets/ui/close/close.png" id="11_tf5ef"]
+[ext_resource type="Texture2D" uid="uid://cgijqyrenn1d3" path="res://assets/ui/close/close_pressed.png" id="12_qao3l"]
+[ext_resource type="Texture2D" uid="uid://b3lh6hg4atanc" path="res://assets/ui/close/close_hover.png" id="13_lknku"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1may8"]
 font = ExtResource("9_bpbph")
@@ -261,22 +263,21 @@ size_flags_horizontal = 8
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
-texture_normal = ExtResource("7_lknku")
-texture_hover = ExtResource("8_u2jyo")
+texture_normal = ExtResource("7_tf5ef")
+texture_pressed = ExtResource("8_qao3l")
+texture_hover = ExtResource("9_lknku")
 
 [node name="SettingsButton" type="TextureButton" parent="MarginContainer/FooterContainer/ButtonContainer" unique_id=1210229923 groups=["buttons"]]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
-texture_normal = ExtResource("7_lknku")
-texture_hover = ExtResource("8_u2jyo")
 
 [node name="Version" type="Label" parent="MarginContainer/FooterContainer" unique_id=514296865]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
-text = "Versão A0.05"
+text = "Versão A0.06"
 label_settings = SubResource("LabelSettings_1may8")
 horizontal_alignment = 2
 vertical_alignment = 2
@@ -345,8 +346,9 @@ offset_right = 304.0
 offset_bottom = 16.0
 size_flags_horizontal = 8
 size_flags_vertical = 0
-texture_normal = ExtResource("10_s4pem")
-texture_hover = ExtResource("11_xio0d")
+texture_normal = ExtResource("11_tf5ef")
+texture_pressed = ExtResource("12_qao3l")
+texture_hover = ExtResource("13_lknku")
 
 [node name="Credits" type="Label" parent="CreditsContainer/MarginContainer/VBoxContainer" unique_id=1473067331]
 custom_minimum_size = Vector2(256, 0)
