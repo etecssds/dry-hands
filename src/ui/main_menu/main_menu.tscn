@@ -15,7 +15,7 @@
 [sub_resource type="LabelSettings" id="LabelSettings_1may8"]
 font = ExtResource("9_bpbph")
 font_size = 9
-font_color = Color(0.89411765, 0.8235294, 0.68235296, 1)
+font_color = Color(1, 0.9137255, 0.84313726, 1)
 shadow_size = 0
 shadow_color = Color(0.49019608, 0.56078434, 0.59607846, 1)
 shadow_offset = Vector2(0, 1)
