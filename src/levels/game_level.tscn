@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://dxcmtxgs58d7o"]
 
 [ext_resource type="PackedScene" uid="uid://cmnfjg13ow7bl" path="res://scenes/cena.tscn" id="1_cp3vr"]
+[ext_resource type="Script" uid="uid://dm5sky78qv1gs" path="res://levels/game_level.gd" id="1_d65c1"]
 [ext_resource type="PackedScene" uid="uid://cl2fk5q11iwns" path="res://characters/amogus.tscn" id="2_fyo3i"]
 
 [node name="GameLevel" type="Node2D" unique_id=2116533260]
+script = ExtResource("1_d65c1")
 
 [node name="Node2D" parent="." unique_id=163271074 instance=ExtResource("1_cp3vr")]
 
