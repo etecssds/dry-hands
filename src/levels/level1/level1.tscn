@@ -10,4 +10,4 @@ script = ExtResource("1_d65c1")
 [node name="Level1Map" parent="." unique_id=163271074 instance=ExtResource("1_cp3vr")]
 
 [node name="amogus" parent="." unique_id=1240929559 instance=ExtResource("2_fyo3i")]
-position = Vector2(106, 21)
+position = Vector2(160, 120)
