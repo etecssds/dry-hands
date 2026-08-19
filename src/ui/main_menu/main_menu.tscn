@@ -205,6 +205,10 @@ label_settings = ExtResource("5_tf5ef")
 horizontal_alignment = 1
 vertical_alignment = 2
 
+[node name="Spacer" type="MarginContainer" parent="MarginContainer/LogoMenuVBox" unique_id=1165125462]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+
 [node name="MenuMargin" type="MarginContainer" parent="MarginContainer/LogoMenuVBox" unique_id=990959849]
 custom_minimum_size = Vector2(256, 64)
 layout_mode = 2
@@ -272,12 +276,13 @@ texture_hover = ExtResource("8_u2jyo")
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
-text = "Versão A0.4"
+text = "Versão A0.05"
 label_settings = SubResource("LabelSettings_1may8")
 horizontal_alignment = 2
 vertical_alignment = 2
 
 [node name="Mask" type="ColorRect" parent="." unique_id=1902865244]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
