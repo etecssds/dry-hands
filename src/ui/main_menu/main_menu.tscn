@@ -352,17 +352,17 @@ texture_hover = ExtResource("11_xio0d")
 custom_minimum_size = Vector2(256, 0)
 layout_mode = 2
 size_flags_vertical = 6
-text = "Este jogo foi produzido com muito carinho e dedicação em São Sebastião - SP.
-
+text = "Este jogo foi produzido com o apoio da Etec de São Sebastião.
 Obra original por Graciliano Ramos
 
 Roteiro:
-Danilo Santana da Silva
+Heitor Marmo
+Danilo Santana
 
 Programação:
-João Gabriel Andrade Sacchi
-Michael Breno Oliveira de Paiva
-Samuell Lorem Ipsum
+João Sacchi
+Michael Paiva
+Samuell Moreira
 
 Artes visuais:
 Heitor Marmo Nascimento de Andrade
