@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://6buh1nsjesoq" path="res://assets/ui/credits/credits.png" id="7_tf5ef"]
 [ext_resource type="Texture2D" uid="uid://b85rmo76llc08" path="res://assets/ui/credits/credits_pressed.png" id="8_qao3l"]
 [ext_resource type="FontFile" uid="uid://i3itppdqun3j" path="res://assets/fonts/Not Jam Chunky Sans 9.ttf" id="9_bpbph"]
-[ext_resource type="Texture2D" uid="uid://st182s56uj6o" path="res://assets/ui/credits/credits_hover.png" id="9_lknku"]
+[ext_resource type="Texture2D" uid="uid://ckck31yctyw4g" path="res://assets/ui/credits/credits_hover.png" id="9_lknku"]
 [ext_resource type="Texture2D" uid="uid://dv05uyxomqxsq" path="res://assets/ui/close/close.png" id="11_tf5ef"]
 [ext_resource type="Texture2D" uid="uid://cgijqyrenn1d3" path="res://assets/ui/close/close_pressed.png" id="12_qao3l"]
 [ext_resource type="Texture2D" uid="uid://b3lh6hg4atanc" path="res://assets/ui/close/close_hover.png" id="13_lknku"]
