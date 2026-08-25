@@ -259,7 +259,7 @@ size_flags_vertical = 8
 layout_mode = 2
 size_flags_horizontal = 8
 
-[node name="CreditsButton" type="TextureButton" parent="MarginContainer/FooterContainer/ButtonContainer" unique_id=1305179330 groups=["buttons"]]
+[node name="CreditsButton" type="TextureButton" parent="MarginContainer/FooterContainer/ButtonContainer" unique_id=1305179330]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
@@ -267,7 +267,7 @@ texture_normal = ExtResource("7_tf5ef")
 texture_pressed = ExtResource("8_qao3l")
 texture_hover = ExtResource("9_lknku")
 
-[node name="SettingsButton" type="TextureButton" parent="MarginContainer/FooterContainer/ButtonContainer" unique_id=1210229923 groups=["buttons"]]
+[node name="SettingsButton" type="TextureButton" parent="MarginContainer/FooterContainer/ButtonContainer" unique_id=1210229923]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 8
@@ -277,7 +277,7 @@ size_flags_vertical = 8
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
-text = "Versão A0.06"
+text = "Versão A0.07"
 label_settings = SubResource("LabelSettings_1may8")
 horizontal_alignment = 2
 vertical_alignment = 2
@@ -339,7 +339,7 @@ text = "CRÉDITOS"
 label_settings = SubResource("LabelSettings_ibi8t")
 horizontal_alignment = 1
 
-[node name="QuitCreditsButton" type="TextureButton" parent="CreditsContainer/MarginContainer/VBoxContainer/CreditsTitle" unique_id=4540227 groups=["buttons"]]
+[node name="QuitCreditsButton" type="TextureButton" parent="CreditsContainer/MarginContainer/VBoxContainer/CreditsTitle" unique_id=4540227]
 layout_mode = 0
 offset_left = 288.0
 offset_right = 304.0

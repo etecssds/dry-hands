@@ -20,3 +20,5 @@ rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_xeerb")
 
 [node name="Animation" type="AnimationPlayer" parent="." unique_id=549782095]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2115678668]

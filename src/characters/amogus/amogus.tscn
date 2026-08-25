@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cl2fk5q11iwns"]
 
 [ext_resource type="PackedScene" uid="uid://b0jaggxkwbusd" path="res://characters/base_character.tscn" id="1_55lds"]
-[ext_resource type="Texture2D" uid="uid://doljup8bs3eet" path="res://assets/characters/amogus/amogus.png" id="2_fpln6"]
+[ext_resource type="Texture2D" uid="uid://doljup8bs3eet" path="res://characters/amogus/amogus.png" id="2_fpln6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5xh0r"]
 radius = 3.0
@@ -41,8 +41,9 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_v5n0j"]
 resource_name = "walk"
+length = 0.5000083482347428
 loop_mode = 1
-step = 0.1667
+step = 0.083333336
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -50,7 +51,7 @@ tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1667, 0.3334, 0.5001, 0.6668, 0.8335),
+"times": PackedFloat32Array(0, 0.083333336, 0.16666667, 0.25, 0.33333334, 0.41666666),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [6, 7, 8, 9, 10, 11]
@@ -80,5 +81,3 @@ shape = SubResource("CapsuleShape2D_5xh0r")
 [node name="Animation" parent="." index="2" unique_id=549782095]
 libraries/ = SubResource("AnimationLibrary_qenwo")
 autoplay = &"idle"
-
-[node name="Camera2D" type="Camera2D" parent="." index="3" unique_id=284584765]
