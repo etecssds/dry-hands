@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://cl2fk5q11iwns"]
+
+[ext_resource type="PackedScene" uid="uid://b0jaggxkwbusd" path="res://characters/base_character.tscn" id="1_55lds"]
+[ext_resource type="Texture2D" uid="uid://dy63skkyjtgkl" path="res://characters/fabiano/fabiano.png" id="2_2da6j"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5xh0r"]
+radius = 3.0
+height = 8.0
+
+[sub_resource type="Animation" id="Animation_0rbtg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_e6n8i"]
+resource_name = "idle"
+loop_mode = 1
+step = 0.1667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_v5n0j"]
+resource_name = "walk"
+length = 0.5000083482347428
+loop_mode = 1
+step = 0.083333336
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.083333336, 0.16666667, 0.25, 0.33333334, 0.41666666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [6, 7, 8, 2, 10, 11]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qenwo"]
+_data = {
+&"RESET": SubResource("Animation_0rbtg"),
+&"idle": SubResource("Animation_e6n8i"),
+&"walk": SubResource("Animation_v5n0j")
+}
+
+[node name="amogus" unique_id=1240929559 instance=ExtResource("1_55lds")]
+
+[node name="Sprite" parent="." index="0" unique_id=204840225]
+position = Vector2(-0.5, -8)
+texture = ExtResource("2_2da6j")
+hframes = 3
+vframes = 3
+
+[node name="Collision" parent="." index="1" unique_id=1242892702]
+visible = false
+show_behind_parent = false
+position = Vector2(0, -1)
+shape = SubResource("CapsuleShape2D_5xh0r")
+
+[node name="Animation" parent="." index="2" unique_id=549782095]
+libraries/ = SubResource("AnimationLibrary_qenwo")
+autoplay = &"idle"
