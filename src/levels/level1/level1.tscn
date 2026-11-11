@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://dys1j1xuhetiq" path="res://assets/ground.png" id="2_sfwlx"]
 [ext_resource type="PackedScene" uid="uid://bmmofw4vcpdcy" path="res://ui/pause_menu/pause_menu.tscn" id="3_tysf0"]
 [ext_resource type="LabelSettings" uid="uid://cdaraau3ep3ex" path="res://ui/label.tres" id="5_tysf0"]
-[ext_resource type="Texture2D" uid="uid://dy63skkyjtgkl" path="res://characters/fabiano/fabiano.png" id="6_3jy00"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wjoo6"]
 texture = ExtResource("1_aatsp")
@@ -168,11 +167,6 @@ visible = false
 
 [node name="Fabiano" parent="." unique_id=1240929559 instance=ExtResource("2_c6lro")]
 _move_speed = 0.0
-
-[node name="Sprite" parent="Fabiano" index="0" unique_id=204840225]
-texture = ExtResource("6_3jy00")
-hframes = 3
-vframes = 3
 
 [node name="Camera2D" parent="Fabiano" index="3" unique_id=2115678668]
 offset = Vector2(0, 128)
