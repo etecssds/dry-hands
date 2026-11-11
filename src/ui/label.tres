@@ -3,6 +3,7 @@
 [ext_resource type="FontFile" uid="uid://d3jvo6qsud148" path="res://assets/fonts/Pixuf.ttf" id="1_2s72d"]
 
 [resource]
+line_spacing = 0.0
 font = ExtResource("1_2s72d")
 font_size = 9
 font_color = Color(1, 0.9137255, 0.84313726, 1)

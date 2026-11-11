@@ -209,8 +209,8 @@ text = "Sair"
 process_mode = 3
 libraries/ = SubResource("AnimationLibrary_uuf13")
 
-[connection signal="pressed" from="MenuContainer/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="MenuContainer/VBoxContainer/ResumeButton" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="MenuContainer/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="MenuContainer/VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
 [connection signal="pressed" from="MenuContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="animation_finished" from="PauseTransition" to="." method="_on_pause_transition_animation_finished"]
