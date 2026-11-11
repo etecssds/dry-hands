@@ -147,8 +147,9 @@ _data = {
 &"intro": SubResource("Animation_sfwlx")
 }
 
-[node name="Level1" type="Node2D" unique_id=2116533260]
+[node name="Level1" type="Node2D" unique_id=2116533260 node_paths=PackedStringArray("_hud")]
 script = ExtResource("1_sfwlx")
+_hud = NodePath("dialogHud")
 
 [node name="Level1Map" type="Node2D" parent="." unique_id=163271074]
 
@@ -161,6 +162,7 @@ tile_map_data = PackedByteArray("AADe/+X/AgAAAAAAAADe/+T/AgAAAAAAAADf/+T/AgAAAAA
 tile_set = SubResource("TileSet_828d7")
 
 [node name="PauseMenuLayer" type="CanvasLayer" parent="Level1Map" unique_id=32760239]
+layer = 2
 
 [node name="PauseMenu" parent="Level1Map/PauseMenuLayer" unique_id=1535520492 instance=ExtResource("3_tysf0")]
 visible = false
@@ -211,5 +213,7 @@ label_settings = ExtResource("5_tysf0")
 
 [node name="Cutscene" type="AnimationPlayer" parent="." unique_id=1452212369]
 libraries/ = SubResource("AnimationLibrary_tysf0")
+
+[node name="dialogHud" type="CanvasLayer" parent="." unique_id=1695856468]
 
 [editable path="Fabiano"]

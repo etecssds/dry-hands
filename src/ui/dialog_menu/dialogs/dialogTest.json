@@ -1,0 +1,122 @@
+{
+	"start": {
+		"title": "Narrador",
+		"dialog": "Em uma noite fria e sem lua, dois vampiros vagavam pelas ruas abandonadas de uma cidade esquecida. Há dias, não encontravam uma única gota de sangue, e seus corpos estavam cada vez mais fracos. Se não encontrassem alimento naquela noite, talvez não sobrevivessem até o amanhecer.",
+		"faceSet": "res://icon.png",
+		"next": "1"
+	},
+	"1": {
+		"title": "Victor",
+		"dialog": "Luna... não consigo continuar. Meus braços estão dormentes, e mal consigo enxergar. Se não encontrarmos sangue logo, será o nosso fim.",
+		"faceSet": "res://assets/ui/cursor.png",
+		"next": "2"
+	},
+	"2": {
+		"title": "Luna",
+		"dialog": "Não desista agora, Victor. Sinto que há algo por perto... Um cheiro diferente. Forte, fresco... Você não sente?",
+		"faceSet": "res://assets/ui/logo-cps.png",
+		"next": "3"
+	},
+	"3": {
+		"title": "Victor",
+		"dialog": "Sim... sangue! E muito! Vem daquela construção. Parece um hospital abandonado, mas como pode haver sangue ali depois de tantos anos?",
+		"faceSet": "res://assets/ui/cursor.png",
+		"next": "4"
+	},
+	"4": {
+		"title": "Luna",
+		"dialog": "Não importa. Precisamos chegar lá antes que nossas forças acabem. Vamos!",
+		"faceSet": "res://assets/ui/logo-cps.png",
+		"next": "5"
+	},
+	"5": {
+		"title": "Narrador",
+		"dialog": "Com as últimas forças, os dois atravessaram a rua e entraram no hospital. O lugar estava coberto de poeira, com macas enferrujadas e frascos espalhados pelo chão. No fim de um corredor escuro, uma porta entreaberta deixava escapar uma luz vermelha.",
+		"faceSet": "res://icon.png",
+		"next": "6"
+	},
+	"6": {
+		"title": "Victor",
+		"dialog": "Olhe aquilo... Uma geladeira médica. E o cheiro está vindo de dentro dela! Talvez ainda existam bolsas de sangue preservadas.",
+		"faceSet": "res://assets/ui/cursor.png",
+		"next": "7"
+	},
+	"7": {
+		"title": "Luna",
+		"dialog": "Depressa! Não sei quanto tempo mais consigo ficar de pé.",
+		"faceSet": "res://assets/ui/logo-cps.png",
+		"next": "8"
+	},
+	"8": {
+		"title": "Narrador",
+		"dialog": "Victor abriu a geladeira com dificuldade. Lá dentro, encontrou dezenas de bolsas de sangue perfeitamente conservadas. Os olhos dos dois brilharam, e, pela primeira vez em semanas, sentiram esperança.",
+		"faceSet": "res://icon.png",
+		"next": "9"
+	},
+	"9": {
+		"title": "Victor",
+		"dialog": "Conseguimos, Luna! Estamos salvos! Depois de tantas noites de sofrimento, finalmente encontramos o que precisávamos.",
+		"faceSet": "res://assets/ui/cursor.png",
+		"next": "10"
+	},
+	"10": {
+		"title": "Luna",
+		"dialog": "Espere... Há algo escrito nesta etiqueta. 'Projeto Hemoglobina — Amostras experimentais. Não consumir sob nenhuma circunstância.'",
+		"faceSet": "res://assets/ui/logo-cps.png",
+		"next": "11"
+	},
+	"11": {
+		"title": "Victor",
+		"dialog": "Você está brincando, não é? Estamos quase mortos! Não podemos nos dar ao luxo de escolher.",
+		"faceSet": "res://assets/ui/cursor.png",
+		"next": "12"
+	},
+	"12": {
+		"title": "Narrador",
+		"dialog": "Sem outra opção, os dois beberam o sangue. No início, sentiram apenas o calor familiar percorrendo seus corpos. Suas feridas se fecharam, suas forças retornaram e a fome desapareceu. Mas, segundos depois, algo estranho aconteceu.",
+		"faceSet": "res://icon.png",
+		"next": "13"
+	},
+	"13": {
+		"title": "Luna",
+		"dialog": "Victor... minhas mãos! Olhe para elas! Estão brilhando! E eu consigo sentir cada batimento cardíaco desta cidade!",
+		"faceSet": "res://assets/ui/logo-cps.png",
+		"next": "14"
+	},
+	"14": {
+		"title": "Victor",
+		"dialog": "Meu coração... Está batendo! Luna, meu coração voltou a bater! Isso é impossível! Nós somos vampiros!",
+		"faceSet": "res://assets/ui/cursor.png",
+		"next": "15"
+	},
+	"15": {
+		"title": "Narrador",
+		"dialog": "Um ruído metálico ecoou pelo hospital. As luzes se acenderam, e uma voz mecânica surgiu nos alto-falantes. O sangue que haviam encontrado não era comum: fazia parte de um experimento secreto destinado a transformar vampiros em seres capazes de caminhar sob a luz do sol.",
+		"faceSet": "res://icon.png",
+		"next": "16"
+	},
+	"16": {
+		"title": "Voz Misteriosa",
+		"dialog": "Amostras consumidas. Experimento concluído. Bem-vindos de volta à vida, sujeitos 001 e 002. Agora, preparem-se para a próxima fase.",
+		"faceSet": "res://assets/ui/hands.png",
+		"next": "17"
+	},
+	"17": {
+		"title": "Luna",
+		"dialog": "Victor... se esse sangue foi criado para nos transformar, quem o desenvolveu? E o que significa 'próxima fase'?",
+		"faceSet": "res://assets/ui/logo-cps.png",
+		"next": "18"
+	},
+	"18": {
+		"title": "Victor",
+		"dialog": "Não sei, Luna. Mas uma coisa é certa: não viemos aqui apenas para sobreviver. E tenho a sensação de que acabamos de entrar em algo muito maior do que nós.",
+		"faceSet": "res://assets/ui/cursor.png",
+		"next": "fim"
+	},
+	"fim": {
+		"title": "Narrador",
+		"dialog": "Naquela noite, dois vampiros que estavam prestes a morrer encontraram o sangue que os salvaria. Entretanto, ao recuperarem suas forças, descobriram que sua sobrevivência fazia parte de um plano desconhecido. E, pela primeira vez em séculos, o maior medo dos vampiros deixou de ser a luz do sol: passou a ser aquilo em que poderiam se transformar.",
+		"faceSet": "res://icon.png",
+		"next": "end"
+	}
+}
