@@ -26,10 +26,6 @@ Nosso projeto é um jogo inspirado nos acontecimentos, personagens e desafios pr
 4. Selecione a pasta `src` e clique em Importar.
 5. Para iniciar o jogo, aperte F5 ou clique no botão Executar Projeto ("play") no canto superior direito.
 
-## Andamento do projeto
-
-Você pode ver o nosso progresso no [Projeto](https://github.com/orgs/etecssds/projects/1).
-
 ## Licença e Direitos Autorais
 
 Este projeto é de código aberto (open source) e utiliza licenças diferentes para o código-fonte e para os recursos visuais/sonoros:
