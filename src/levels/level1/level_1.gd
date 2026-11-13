@@ -12,13 +12,13 @@ var _dictionary = JSON.parse_string(_jsonText)
 
 
 func _ready() -> void:
-	$Cutscene.play("intro")
+    $Cutscene.play("intro")
 
 func _process(_delta: float) -> void:
-	if Input.is_action_just_pressed("enter") and _newDialog._exist == false:
-		_newDialog.data = _dictionary
-		_newDialog._exist = true
-		_hud.add_child(_newDialog)
-		
-	if is_instance_valid(_newDialog) == false:
-		_newDialog = _dialogScreen.instantiate()
+    if Input.is_action_just_pressed("enter") and _newDialog._exist == false:
+        _newDialog.data = _dictionary
+        _newDialog._exist = true
+        _hud.add_child(_newDialog)
+        
+    if is_instance_valid(_newDialog) == false:
+        _newDialog = _dialogScreen.instantiate()
