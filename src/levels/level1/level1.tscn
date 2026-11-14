@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c0xf44rrl8okh" path="res://assets/path.png" id="1_aatsp"]
 [ext_resource type="Script" uid="uid://clbolnxk36o2k" path="res://levels/level1/level_1.gd" id="1_sfwlx"]
-[ext_resource type="PackedScene" uid="uid://cl2fk5q11iwns" path="res://characters/fabiano/fabiano.tscn" id="2_c6lro"]
+[ext_resource type="PackedScene" uid="uid://cl2fk5q11iwns" path="res://characters/svitoria/svitoria.tscn" id="2_c6lro"]
 [ext_resource type="Texture2D" uid="uid://dys1j1xuhetiq" path="res://assets/ground.png" id="2_sfwlx"]
 [ext_resource type="PackedScene" uid="uid://bmmofw4vcpdcy" path="res://ui/pause_menu/pause_menu.tscn" id="3_tysf0"]
 [ext_resource type="LabelSettings" uid="uid://cdaraau3ep3ex" path="res://ui/label.tres" id="5_tysf0"]
@@ -43,46 +43,34 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Fabiano:_move_speed")
+tracks/0/path = NodePath("Fabiano/Camera2D:offset")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.0]
+"values": [Vector2(0, 128)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Fabiano/Camera2D:offset")
+tracks/1/path = NodePath("ControlHintLayer:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 128)]
+"update": 1,
+"values": [true]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("ControlHintLayer:visible")
+tracks/2/path = NodePath("ControlHintLayer/ControlHint:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("ControlHintLayer/ControlHint:modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -95,46 +83,34 @@ length = 7.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Fabiano:_move_speed")
-tracks/0/interp = 1
+tracks/0/path = NodePath("Fabiano/Camera2D:offset")
+tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 2.5, 3),
-"transitions": PackedFloat32Array(1, 2.4622886, 1),
-"update": 0,
-"values": [0.0, 0.0, 64.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Fabiano/Camera2D:offset")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "times": PackedFloat32Array(0, 3),
 "transitions": PackedFloat32Array(0.4, 1),
 "update": 0,
 "values": [Vector2(0, 128), Vector2(0, 0)]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("ControlHintLayer:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ControlHintLayer:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
 "times": PackedFloat32Array(0, 7),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
 }
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("ControlHintLayer/ControlHint:modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ControlHintLayer/ControlHint:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
 "times": PackedFloat32Array(6, 7),
 "transitions": PackedFloat32Array(0.2, 1),
 "update": 0,
@@ -168,7 +144,6 @@ layer = 2
 visible = false
 
 [node name="Fabiano" parent="." unique_id=1240929559 instance=ExtResource("2_c6lro")]
-_move_speed = 0.0
 
 [node name="Camera2D" parent="Fabiano" index="3" unique_id=2115678668]
 offset = Vector2(0, 128)
