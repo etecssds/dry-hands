@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://b8ajg02bewk22"]
+
+[ext_resource type="Script" uid="uid://bimrf4cu6np86" path="res://ui/dialog/dialog.gd" id="1_b7qic"]
+[ext_resource type="Texture2D" uid="uid://d1xdeu1wrym1i" path="res://assets/ui/menu_container.png" id="2_d4hgk"]
+[ext_resource type="FontFile" uid="uid://ct0qnxydyhaa" path="res://assets/fonts/quaver.ttf" id="3_q1o3a"]
+[ext_resource type="FontFile" uid="uid://cburfa62w521v" path="res://assets/fonts/alagard.ttf" id="4_se7iy"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_d86nc"]
+line_spacing = 0.0
+font = ExtResource("3_q1o3a")
+font_size = 10
+font_color = Color(1, 0.9137255, 0.84313726, 1)
+
+[node name="Dialog" type="Control" unique_id=1607766323]
+custom_minimum_size = Vector2(260, 70)
+custom_maximum_size = Vector2(260, 70)
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -130.0
+offset_top = 20.0
+offset_right = 130.0
+offset_bottom = 90.0
+grow_horizontal = 2
+script = ExtResource("1_b7qic")
+
+[node name="DialogBorder" type="NinePatchRect" parent="." unique_id=1678403419]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_d4hgk")
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 1
+patch_margin_bottom = 1
+
+[node name="Content" type="HBoxContainer" parent="DialogBorder" unique_id=1233250766]
+custom_minimum_size = Vector2(252, 62)
+custom_maximum_size = Vector2(252, 62)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -126.0
+offset_top = -31.0
+offset_right = 126.0
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FaceBorder" type="NinePatchRect" parent="DialogBorder/Content" unique_id=1701262844]
+custom_minimum_size = Vector2(62, 0)
+layout_mode = 2
+texture = ExtResource("2_d4hgk")
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 1
+patch_margin_bottom = 1
+
+[node name="FaceSet" type="TextureRect" parent="DialogBorder/Content/FaceBorder" unique_id=1364827744]
+custom_minimum_size = Vector2(60, 62)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -31.0
+offset_right = 30.0
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Text" type="VBoxContainer" parent="DialogBorder/Content" unique_id=1782843181]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Name" type="Label" parent="DialogBorder/Content/Text" unique_id=798429863]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_d86nc")
+
+[node name="Dialog" type="RichTextLabel" parent="DialogBorder/Content/Text" unique_id=2030375543]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("4_se7iy")
+theme_override_font_sizes/normal_font_size = 6

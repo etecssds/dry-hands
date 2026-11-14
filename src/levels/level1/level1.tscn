@@ -209,13 +209,13 @@ offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "Controles:
-WASD: Movimentação
-E: Avançar diálogos"
+WASD/setas: Movimentação
+E: Interagir"
 label_settings = ExtResource("5_tysf0")
+
+[node name="DialogLayer" type="CanvasLayer" parent="." unique_id=1695856468]
 
 [node name="Cutscene" type="AnimationPlayer" parent="." unique_id=1452212369]
 libraries/ = SubResource("AnimationLibrary_tysf0")
-
-[node name="dialogHud" type="CanvasLayer" parent="." unique_id=1695856468]
 
 [editable path="Fabiano"]
