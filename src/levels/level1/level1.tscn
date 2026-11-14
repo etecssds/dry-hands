@@ -149,6 +149,7 @@ _data = {
 
 [node name="Level1" type="Node2D" unique_id=2116533260]
 script = ExtResource("1_sfwlx")
+_jsonDictionary = "res://ui/dialog/dialogs/test_dialog.json"
 
 [node name="Level1Map" type="Node2D" parent="." unique_id=163271074]
 

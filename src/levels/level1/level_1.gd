@@ -1,2 +1,2 @@
+class_name Level1
 extends BaseLevel
-class_name level1
