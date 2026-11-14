@@ -7,7 +7,7 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 		get_tree().change_scene_to_file("res://ui/main_menu/main_menu.tscn")
 
 func skipIntro():
-	if Input.is_action_just_pressed("space"):
+	if Input.is_action_just_pressed("skip_intro"):
 		get_tree().change_scene_to_file("res://ui/main_menu/main_menu.tscn")
 
 func _process(_delta: float) -> void:

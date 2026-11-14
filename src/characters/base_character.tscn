@@ -6,10 +6,8 @@
 radius = 3.0
 height = 12.0
 
-[node name="BodyCharacter" type="CharacterBody2D" unique_id=1240929559 node_paths=PackedStringArray("_animation", "_sprite2D")]
+[node name="BodyCharacter" type="CharacterBody2D" unique_id=1240929559]
 script = ExtResource("1_f78fl")
-_animation = NodePath("Animation")
-_sprite2D = NodePath("Sprite")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=204840225]
 position = Vector2(0, -8)
@@ -22,3 +20,6 @@ shape = SubResource("CapsuleShape2D_xeerb")
 [node name="Animation" type="AnimationPlayer" parent="." unique_id=549782095]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2115678668]
+
+[node name="RayCast" type="RayCast2D" parent="." unique_id=1865956171]
+target_position = Vector2(0, 16)
