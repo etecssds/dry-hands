@@ -2,7 +2,7 @@ class_name MainMenu
 extends Control
 
 @export_category("Objects")
-@export var _version: String = "res://ui/main_menu/version.txt"
+@export var _version: StringName = "res://ui/main_menu/version.txt"
 
 @onready var VersionLabel: Label = $MarginContainer/FooterContainer/Version
 

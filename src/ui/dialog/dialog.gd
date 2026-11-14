@@ -6,7 +6,7 @@ class_name DialogScreen
 @onready var _faceSet: TextureRect = $DialogBorder/Content/FaceBorder/FaceSet
 
 var _step: float = 0.025
-var id: String = "start"
+var id: StringName = "start"
 var data: Dictionary
 
 var _tween: Tween
