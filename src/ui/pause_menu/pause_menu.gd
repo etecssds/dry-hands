@@ -6,14 +6,13 @@ func pause() -> void:
     pause_menu.visible = true
     $PauseTransition.play("fade_in")
 
-
 func resume_anim() -> void:
     $PauseTransition.play("fade_out")
 
 func resume() -> void:
     get_tree().paused = false
     pause_menu.visible = false
-    
+
 func _on_pause_transition_animation_finished(anim_name: StringName) -> void:
     if anim_name == "fade_out":
         resume()
@@ -23,7 +22,6 @@ func paused() -> void:
         pause()
     elif Input.is_action_just_pressed("pause") and pause_menu.visible == true:
         resume_anim()
-
 
 func _on_resume_button_pressed() -> void:
     resume_anim()

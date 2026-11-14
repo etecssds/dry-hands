@@ -128,7 +128,7 @@ _data = {
 &"fade_out": SubResource("Animation_tf5ef")
 }
 
-[node name="MainMenu" type="Control" unique_id=1994593722]
+[node name="MainMenu" type="Control" unique_id=1994593722 node_paths=PackedStringArray("_versionLabel")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -137,6 +137,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_w2r0d")
 script = ExtResource("2_4e78x")
+_versionLabel = NodePath("MarginContainer/FooterContainer/Version")
 
 [node name="Background" type="TextureRect" parent="." unique_id=1669074208]
 layout_mode = 1
@@ -277,7 +278,6 @@ size_flags_vertical = 8
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
-text = "Versão A0.12"
 label_settings = SubResource("LabelSettings_1may8")
 horizontal_alignment = 2
 vertical_alignment = 2

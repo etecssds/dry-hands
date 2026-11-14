@@ -1,6 +1,13 @@
 extends Control
 class_name MainMenu
 
+@export_category("Objects")
+@export var _versionLabel: Label = null
+@export var _version: String = "res://ui/main_menu/version.txt"
+
+func _ready() -> void:
+    _versionLabel.text = "Versão " + FileAccess.get_file_as_string(_version)
+
 func _on_transition_animation_finished(_anim_name: StringName) -> void:
     $Mask.visible = false
 
