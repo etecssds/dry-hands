@@ -1,20 +1,20 @@
 class_name PauseMenu
 extends Control
 
-@onready var PauseMenu: Control = $"."
+@onready var _PauseMenu: Control = $"."
 
 
 func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("pause"):
-		if not PauseMenu.visible:
+		if not _PauseMenu.visible:
 			pause()
-		elif PauseMenu.visible:
+		elif _PauseMenu.visible:
 			resume_anim()
 
 
 func pause() -> void:
 	get_tree().paused = true
-	PauseMenu.visible = true
+	_PauseMenu.visible = true
 	$PauseTransition.play("fade_in")
 
 
@@ -24,7 +24,7 @@ func resume_anim() -> void:
 
 func resume() -> void:
 	get_tree().paused = false
-	PauseMenu.visible = false
+	_PauseMenu.visible = false
 
 
 func _on_pause_transition_animation_finished(anim_name: StringName) -> void:

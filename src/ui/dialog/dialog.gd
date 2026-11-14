@@ -5,39 +5,45 @@ class_name DialogScreen
 @onready var _dialog: RichTextLabel = $DialogBorder/Content/Text/Dialog
 @onready var _faceSet: TextureRect = $DialogBorder/Content/FaceBorder/FaceSet
 
-var _exist: bool = false
-var _step: float = 0.05
-var _id: String = "start"
+var _step: float = 0.025
+var id: String = "start"
 var data: Dictionary
 
+var _tween: Tween
 
 func _ready() -> void:
-	_initializeDialog()
-	
+	if not data.is_empty():
+		_initializeDialog()
+
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("dialog"):
+		if _dialog.visible_ratio < 1:
+			if _tween and _tween.is_valid():
+				_tween.kill()
+				_dialog.visible_ratio = 1
+			return
+		else:
+			id = data[id]["next"]
+			if id == "end":
+				queue_free()
+				return
+			_initializeDialog()
+
 
 func _initializeDialog() -> void:
-	_name.text = data[_id]["title"]
-	_dialog.text = data[_id]["dialog"]
-	_faceSet.texture = load(data[_id]["faceSet"])
+	_name.text = data[id].get("title", "")
+	_dialog.text = data[id].get("dialog", "")
+	_faceSet.texture = load(data[id].get("faceSet", ""))
 	
-	_dialog.visible_characters = 0
+	_dialog.visible_ratio = 0.0
 	
-	while _dialog.visible_ratio < 1:
-		await get_tree().create_timer(_step).timeout
-		_dialog.visible_characters += 1
-
-
-func _process(_delta: float) -> void:
-	_step = 0.05
-
-	if Input.is_action_pressed("dialog") and _dialog.visible_ratio < 1:
-		_step = 0.01
-		return
-
-	if Input.is_action_just_pressed("dialog"):
-		_id = data[_id]["next"]
-		if _id == "end":
-			_exist = false
-			queue_free()
-			return
-		_initializeDialog()
+	if _tween and _tween.is_valid():
+		_tween.kill()
+	
+	var _duration: float = _dialog.get_total_character_count() * _step
+	
+	_tween = create_tween()
+	_tween.tween_property(_dialog, "visible_ratio", 1.0, _duration)
+	
+	
