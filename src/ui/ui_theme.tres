@@ -14,13 +14,21 @@ border_color = Color(1, 0.9137255, 0.84313726, 1)
 anti_aliasing = false
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jf26r"]
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.99607843, 0.63529414, 0.3372549, 1)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vuqvt"]
 bg_color = Color(0.19215687, 0.15686275, 0.12941177, 1)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-border_color = Color(1, 0.9137255, 0.84313726, 1)
-anti_aliasing = false
+border_color = Color(0.99607843, 0.63529414, 0.3372549, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iqtc0"]
 bg_color = Color(0.99607843, 0.63529414, 0.3372549, 1)
@@ -28,7 +36,7 @@ border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-border_color = Color(1, 0.9137255, 0.84313726, 1)
+border_color = Color(0.99607843, 0.63529414, 0.3372549, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6lx7k"]
 bg_color = Color(0.19215687, 0.15686275, 0.12941177, 1)
@@ -65,8 +73,8 @@ expand_margin_bottom = 2.0
 [resource]
 Button/colors/font_color = Color(1, 0.9137255, 0.84313726, 1)
 Button/colors/font_disabled_color = Color(0.5764706, 0.61960787, 0.6392157, 1)
-Button/colors/font_focus_color = Color(0.60784316, 0.42352942, 0.27450982, 1)
-Button/colors/font_hover_color = Color(0.60784316, 0.42352942, 0.27450982, 1)
+Button/colors/font_focus_color = Color(1, 0.9137255, 0.84313726, 1)
+Button/colors/font_hover_color = Color(0.5764706, 0.61960787, 0.6392157, 1)
 Button/colors/font_hover_pressed_color = Color(0.46666667, 0.38039216, 0.30588236, 1)
 Button/colors/font_outline_color = Color(0.19215687, 0.15686275, 0.12941177, 1)
 Button/colors/font_pressed_color = Color(0.19215687, 0.15686275, 0.12941177, 1)
@@ -84,7 +92,7 @@ Button/font_sizes/font_size = 18
 Button/fonts/font = ExtResource("1_udl1o")
 Button/styles/disabled = SubResource("StyleBoxFlat_rqugq")
 Button/styles/focus = SubResource("StyleBoxFlat_jf26r")
-Button/styles/hover = SubResource("StyleBoxFlat_jf26r")
+Button/styles/hover = SubResource("StyleBoxFlat_vuqvt")
 Button/styles/hover_pressed = SubResource("StyleBoxFlat_iqtc0")
 Button/styles/normal = SubResource("StyleBoxFlat_6lx7k")
 Button/styles/pressed = SubResource("StyleBoxFlat_iqtc0")

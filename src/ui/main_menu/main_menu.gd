@@ -8,7 +8,8 @@ extends Control
 
 
 func _ready() -> void:
-	VersionLabel.text = "Versão " + FileAccess.get_file_as_string(_version)
+	VersionLabel.text = "Versão " + FileAccess.get_file_as_string(_version).strip_edges()
+	$MarginContainer/LogoMenuVBox/MenuMargin/MenuContainer/VBoxContainer/Play.grab_focus()
 
 
 func _on_play_pressed() -> void:

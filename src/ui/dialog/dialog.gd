@@ -11,13 +11,14 @@ var data: Dictionary
 
 var _tween: Tween
 
+
 func _ready() -> void:
 	if not data.is_empty():
 		_initializeDialog()
 
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("dialog"):
+	if event.is_action_pressed("interact"):
 		if _dialog.visible_ratio < 1:
 			if _tween and _tween.is_valid():
 				_tween.kill()
@@ -40,10 +41,8 @@ func _initializeDialog() -> void:
 	
 	if _tween and _tween.is_valid():
 		_tween.kill()
-	
+		
 	var _duration: float = _dialog.get_total_character_count() * _step
 	
 	_tween = create_tween()
 	_tween.tween_property(_dialog, "visible_ratio", 1.0, _duration)
-	
-	

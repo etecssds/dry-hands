@@ -8,8 +8,10 @@ extends Node2D
 		FileAccess.get_file_as_string(_jsonDictionary)
 	)
 @onready var DialogLayer: CanvasLayer = $DialogLayer
+@onready var PauseMenuLayer: CanvasLayer = $PauseMenuLayer
 
-var Dialog: DialogScreen
+var _DialogScreen: DialogScreen
+var _PauseMenu: PauseMenu
 
 
 func _ready() -> void:
@@ -17,10 +19,15 @@ func _ready() -> void:
 
 
 func _input(event: InputEvent) -> void:
-	if event is InputEventKey and event.pressed:
-		if event.is_action_pressed("enter") and not is_instance_valid(Dialog):
-			var _DialogScreen: PackedScene = preload("res://ui/dialog/dialog.tscn")
-			Dialog = _DialogScreen.instantiate()
-			
-			Dialog.data = dictionary
-			DialogLayer.add_child(Dialog)
+	if event.is_action_pressed("pause") and not is_instance_valid(_PauseMenu):
+		var _PauseMenuScene: PackedScene = preload("res://ui/pause_menu/pause_menu.tscn")
+		_PauseMenu = _PauseMenuScene.instantiate()
+		PauseMenuLayer.add_child(_PauseMenu)
+
+
+func open_dialog():
+	var _DialogScene: PackedScene = preload("res://ui/dialog/dialog.tscn")
+	_DialogScreen = _DialogScene.instantiate()
+	
+	_DialogScreen.data = dictionary
+	DialogLayer.add_child(_DialogScreen)

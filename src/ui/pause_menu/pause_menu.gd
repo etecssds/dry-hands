@@ -4,11 +4,14 @@ extends Control
 @onready var _PauseMenu: Control = $"."
 
 
-func _input(_event: InputEvent) -> void:
-	if Input.is_action_just_pressed("pause"):
-		if not _PauseMenu.visible:
-			pause()
-		elif _PauseMenu.visible:
+func _ready() -> void:
+	$MenuContainer/VBoxContainer/ResumeButton.grab_focus()
+	pause()
+
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("pause"):
+		if _PauseMenu.visible:
 			resume_anim()
 
 
@@ -25,6 +28,7 @@ func resume_anim() -> void:
 func resume() -> void:
 	get_tree().paused = false
 	_PauseMenu.visible = false
+	queue_free()
 
 
 func _on_pause_transition_animation_finished(anim_name: StringName) -> void:
