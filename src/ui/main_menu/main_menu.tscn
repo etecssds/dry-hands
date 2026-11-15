@@ -27,7 +27,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Mask:modulate")
+tracks/0/path = NodePath("TransitionMask:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -39,7 +39,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Mask:visible")
+tracks/1/path = NodePath("TransitionMask:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -54,7 +54,7 @@ resource_name = "fade_in"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Mask:modulate")
+tracks/0/path = NodePath("TransitionMask:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -66,7 +66,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Mask:visible")
+tracks/1/path = NodePath("TransitionMask:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -218,29 +218,15 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.68235296, 0.45882353, 0.2901961, 0.64705884)
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1647785615]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -152.0
-offset_top = -112.0
-offset_right = 152.0
-offset_bottom = 112.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="LogoMenuVBox" type="VBoxContainer" parent="MarginContainer" unique_id=551464900]
-layout_mode = 2
+[node name="LogoMenuVBox" type="VBoxContainer" parent="." unique_id=551464900]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 312.0
+offset_bottom = 198.0
 size_flags_vertical = 0
 
-[node name="LogoMargin" type="MarginContainer" parent="MarginContainer/LogoMenuVBox" unique_id=1125359110]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="BigLogo" type="TextureRect" parent="MarginContainer/LogoMenuVBox/LogoMargin" unique_id=707323855]
+[node name="BigLogo" type="TextureRect" parent="LogoMenuVBox" unique_id=707323855]
 custom_minimum_size = Vector2(256, 110)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -249,7 +235,7 @@ texture = ExtResource("4_xio0d")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Title" type="Label" parent="MarginContainer/LogoMenuVBox/LogoMargin/BigLogo" unique_id=340960107]
+[node name="Title" type="Label" parent="LogoMenuVBox/BigLogo" unique_id=340960107]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -267,17 +253,12 @@ label_settings = ExtResource("5_tf5ef")
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="Spacer" type="MarginContainer" parent="MarginContainer/LogoMenuVBox" unique_id=1165125462]
+[node name="Spacer" type="Control" parent="LogoMenuVBox" unique_id=120820070]
 custom_minimum_size = Vector2(0, 8)
 layout_mode = 2
 
-[node name="MenuMargin" type="MarginContainer" parent="MarginContainer/LogoMenuVBox" unique_id=990959849]
+[node name="ButtonsContainer" type="NinePatchRect" parent="LogoMenuVBox" unique_id=1942452217]
 custom_minimum_size = Vector2(256, 64)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 6
-
-[node name="MenuContainer" type="NinePatchRect" parent="MarginContainer/LogoMenuVBox/MenuMargin" unique_id=1942452217]
 layout_mode = 2
 size_flags_vertical = 3
 texture = ExtResource("6_qao3l")
@@ -288,7 +269,7 @@ patch_margin_bottom = 1
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/LogoMenuVBox/MenuMargin/MenuContainer" unique_id=182067193]
+[node name="Buttons" type="VBoxContainer" parent="LogoMenuVBox/ButtonsContainer" unique_id=182067193]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -301,39 +282,44 @@ grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
-[node name="Play" type="Button" parent="MarginContainer/LogoMenuVBox/MenuMargin/MenuContainer/VBoxContainer" unique_id=1494309480]
+[node name="Play" type="Button" parent="LogoMenuVBox/ButtonsContainer/Buttons" unique_id=1494309480]
 layout_mode = 2
 size_flags_vertical = 3
 text = "JOGAR"
 
-[node name="Exit" type="Button" parent="MarginContainer/LogoMenuVBox/MenuMargin/MenuContainer/VBoxContainer" unique_id=908363569]
+[node name="Exit" type="Button" parent="LogoMenuVBox/ButtonsContainer/Buttons" unique_id=908363569]
 layout_mode = 2
 size_flags_vertical = 3
 text = "SAIR"
 
-[node name="FooterContainer" type="VBoxContainer" parent="MarginContainer" unique_id=394728646]
-layout_mode = 2
+[node name="Footer" type="VBoxContainer" parent="." unique_id=394728646]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 203.0
+offset_right = 312.0
+offset_bottom = 232.0
 size_flags_vertical = 8
 
-[node name="ButtonContainer" type="HBoxContainer" parent="MarginContainer/FooterContainer" unique_id=191918408]
+[node name="Buttons" type="HBoxContainer" parent="Footer" unique_id=191918408]
 layout_mode = 2
 size_flags_horizontal = 8
 
-[node name="CreditsButton" type="TextureButton" parent="MarginContainer/FooterContainer/ButtonContainer" unique_id=1305179330]
+[node name="CreditsButton" type="TextureButton" parent="Footer/Buttons" unique_id=1305179330]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
 texture_normal = ExtResource("7_tf5ef")
 texture_pressed = ExtResource("8_qao3l")
 texture_hover = ExtResource("9_lknku")
+texture_focused = ExtResource("9_lknku")
 
-[node name="SettingsButton" type="TextureButton" parent="MarginContainer/FooterContainer/ButtonContainer" unique_id=1210229923]
+[node name="SettingsButton" type="TextureButton" parent="Footer/Buttons" unique_id=1210229923]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
 
-[node name="Version" type="Label" parent="MarginContainer/FooterContainer" unique_id=514296865]
+[node name="Version" type="Label" parent="Footer" unique_id=514296865]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
@@ -341,7 +327,7 @@ label_settings = SubResource("LabelSettings_1may8")
 horizontal_alignment = 2
 vertical_alignment = 2
 
-[node name="Mask" type="ColorRect" parent="." unique_id=1902865244]
+[node name="TransitionMask" type="ColorRect" parent="." unique_id=1902865244]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -354,7 +340,7 @@ color = Color(0.19215687, 0.15686275, 0.12941177, 1)
 libraries/ = SubResource("AnimationLibrary_rkggs")
 autoplay = &"fade_in"
 
-[node name="CreditsContainer" type="Control" parent="." unique_id=450371767]
+[node name="Credits" type="ColorRect" parent="." unique_id=401021667]
 visible = false
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
@@ -363,34 +349,16 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="Background" type="ColorRect" parent="CreditsContainer" unique_id=401021667]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 color = Color(0, 0, 0, 0.8156863)
 
-[node name="MarginContainer" type="MarginContainer" parent="CreditsContainer" unique_id=870272207]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -152.0
-offset_top = -112.0
-offset_right = 152.0
-offset_bottom = 112.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="VBoxContainer" type="VBoxContainer" parent="Credits" unique_id=139889897]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 312.0
+offset_bottom = 232.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CreditsContainer/MarginContainer" unique_id=139889897]
-layout_mode = 2
-
-[node name="CreditsTitle" type="Label" parent="CreditsContainer/MarginContainer/VBoxContainer" unique_id=952979200]
+[node name="CreditsTitle" type="Label" parent="Credits/VBoxContainer" unique_id=952979200]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
@@ -398,7 +366,7 @@ text = "CRÉDITOS"
 label_settings = SubResource("LabelSettings_ibi8t")
 horizontal_alignment = 1
 
-[node name="QuitCreditsButton" type="TextureButton" parent="CreditsContainer/MarginContainer/VBoxContainer/CreditsTitle" unique_id=4540227]
+[node name="QuitCreditsButton" type="TextureButton" parent="Credits/VBoxContainer/CreditsTitle" unique_id=4540227]
 layout_mode = 0
 offset_left = 288.0
 offset_right = 304.0
@@ -409,7 +377,7 @@ texture_normal = ExtResource("11_tf5ef")
 texture_pressed = ExtResource("12_qao3l")
 texture_hover = ExtResource("13_lknku")
 
-[node name="Credits" type="Label" parent="CreditsContainer/MarginContainer/VBoxContainer" unique_id=1473067331]
+[node name="Credits" type="Label" parent="Credits/VBoxContainer" unique_id=1473067331]
 custom_minimum_size = Vector2(256, 0)
 layout_mode = 2
 size_flags_vertical = 6
@@ -432,13 +400,13 @@ label_settings = SubResource("LabelSettings_41qlw")
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="CreditsTransition" type="AnimationPlayer" parent="CreditsContainer" unique_id=297798650]
+[node name="CreditsTransition" type="AnimationPlayer" parent="Credits" unique_id=297798650]
 libraries/ = SubResource("AnimationLibrary_qao3l")
 
-[connection signal="pressed" from="MarginContainer/LogoMenuVBox/MenuMargin/MenuContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="MarginContainer/LogoMenuVBox/MenuMargin/MenuContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
-[connection signal="pressed" from="MarginContainer/FooterContainer/ButtonContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
-[connection signal="pressed" from="MarginContainer/FooterContainer/ButtonContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="LogoMenuVBox/ButtonsContainer/Buttons/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="LogoMenuVBox/ButtonsContainer/Buttons/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Footer/Buttons/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="Footer/Buttons/SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="animation_finished" from="Transition" to="." method="_on_transition_animation_finished"]
-[connection signal="pressed" from="CreditsContainer/MarginContainer/VBoxContainer/CreditsTitle/QuitCreditsButton" to="." method="_on_quit_credits_button_pressed"]
-[connection signal="animation_finished" from="CreditsContainer/CreditsTransition" to="." method="_on_credits_transition_animation_finished"]
+[connection signal="pressed" from="Credits/VBoxContainer/CreditsTitle/QuitCreditsButton" to="." method="_on_quit_credits_button_pressed"]
+[connection signal="animation_finished" from="Credits/CreditsTransition" to="." method="_on_credits_transition_animation_finished"]

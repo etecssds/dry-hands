@@ -4,12 +4,12 @@ extends Control
 @export_category("Objects")
 @export var _version: StringName = "res://ui/main_menu/version.txt"
 
-@onready var VersionLabel: Label = $MarginContainer/FooterContainer/Version
+@onready var VersionLabel: Label = $Footer/Version
 
 
 func _ready() -> void:
 	VersionLabel.text = "Versão " + FileAccess.get_file_as_string(_version).strip_edges()
-	$MarginContainer/LogoMenuVBox/MenuMargin/MenuContainer/VBoxContainer/Play.grab_focus()
+	$LogoMenuVBox/ButtonsContainer/Buttons/Play.grab_focus()
 
 
 func _on_play_pressed() -> void:
@@ -21,11 +21,13 @@ func _on_exit_pressed() -> void:
 
 
 func _on_credits_button_pressed() -> void:
-	$CreditsContainer/CreditsTransition.play("fade_in")
+	$Credits/CreditsTransition.play("fade_in")
+	$Credits/VBoxContainer/CreditsTitle/QuitCreditsButton.grab_focus()
 
 
 func _on_quit_credits_button_pressed() -> void:
-	$CreditsContainer/CreditsTransition.play("fade_out")
+	$Credits/CreditsTransition.play("fade_out")
+	$LogoMenuVBox/ButtonsContainer/Buttons/Play.grab_focus()
 
 
 func _on_settings_button_pressed() -> void:
