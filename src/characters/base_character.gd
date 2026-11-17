@@ -28,13 +28,11 @@ func _move() -> void:
 		return
 		
 	_direction = Vector2.ZERO
-	_direction = Input.get_vector(
-			"move_left",
-			"move_right",
-			"move_up",
-			"move_down"
-		)
-		
+	_direction = Vector2(
+		Input.get_axis("move_left", "move_right"),
+		Input.get_axis("move_up", "move_down")
+	)
+	
 	if _direction.x and _direction.y:
 		_direction.y = 0
 		
