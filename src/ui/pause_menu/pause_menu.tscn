@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bja0bckej0jro" path="res://ui/pause_menu/pause_menu.gd" id="1_b4b0p"]
 [ext_resource type="Theme" uid="uid://bysvkw6b1cmyg" path="res://ui/ui_theme.tres" id="1_c3jo5"]
-[ext_resource type="Texture2D" uid="uid://d1xdeu1wrym1i" path="res://assets/ui/menu_container.png" id="2_c3jo5"]
+[ext_resource type="Texture2D" uid="uid://d1xdeu1wrym1i" path="res://assets/ui/frames/menu_container.png" id="2_c3jo5"]
 
 [sub_resource type="Animation" id="Animation_s4pem"]
 length = 0.001

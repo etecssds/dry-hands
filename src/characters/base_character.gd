@@ -8,12 +8,16 @@ class_name BaseCharacter
 @onready var _animation: AnimationPlayer = $Animation
 @onready var _sprite2D: Sprite2D = $Sprite
 @onready var _ray: RayCast2D = $RayCast
+@onready var pickupLayer: CanvasLayer = $pickupLayer
 
 var _anim_dir: int
 var _direction: Vector2
 var _moving: bool
 var _grid_size: int = 16
 
+
+func  _ready() -> void:
+	GlobalInventory.set_character_reference(self)
 
 func _physics_process(_delta) -> void:
 	if not _can_move:

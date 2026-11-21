@@ -9,6 +9,7 @@ extends Node2D
 	)
 @onready var DialogLayer: CanvasLayer = $DialogLayer
 @onready var PauseMenuLayer: CanvasLayer = $PauseMenuLayer
+@onready var InventoryLayer: CanvasLayer = $InventoryLayer
 
 var _DialogScreen: DialogScreen
 var _PauseMenu: PauseMenu
@@ -23,6 +24,9 @@ func _input(event: InputEvent) -> void:
 		var _PauseMenuScene: PackedScene = preload("res://ui/pause_menu/pause_menu.tscn")
 		_PauseMenu = _PauseMenuScene.instantiate()
 		PauseMenuLayer.add_child(_PauseMenu)
+		
+	if event.is_action_pressed("inventory"):
+		InventoryLayer.visible = !InventoryLayer.visible
 
 
 func open_dialog():

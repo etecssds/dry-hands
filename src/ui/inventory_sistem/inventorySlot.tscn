@@ -1,0 +1,322 @@
+[gd_scene format=3 uid="uid://chasteo06qmnu"]
+
+[ext_resource type="Script" uid="uid://e44itvgqoufb" path="res://ui/inventory_sistem/inventory_slot.gd" id="1_mpedq"]
+[ext_resource type="Texture2D" uid="uid://m77tono7ufay" path="res://assets/ui/frames/hotbar_container.png" id="2_gp2a8"]
+[ext_resource type="Texture2D" uid="uid://bslksjgrkwqow" path="res://assets/icons_food/tapioca_mandioca.png" id="3_mpedq"]
+[ext_resource type="FontFile" uid="uid://b8qgf1i35ufaw" path="res://assets/fonts/dry-fountain-bold.ttf" id="4_awu2c"]
+[ext_resource type="FontFile" uid="uid://d3jvo6qsud148" path="res://assets/fonts/Pixuf.ttf" id="5_jcmyd"]
+[ext_resource type="FontFile" uid="uid://c4rmkl7snscsp" path="res://assets/fonts/dry-fountain-regular.ttf" id="6_dkbqp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lo6bu"]
+font = ExtResource("4_awu2c")
+font_size = 8
+font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oltxx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6i67t"]
+font = ExtResource("6_dkbqp")
+font_size = 9
+
+[sub_resource type="LabelSettings" id="LabelSettings_1ab01"]
+font = ExtResource("6_dkbqp")
+font_size = 9
+font_color = Color(1, 1, 1, 0.88235295)
+
+[sub_resource type="LabelSettings" id="LabelSettings_f13jp"]
+font = ExtResource("6_dkbqp")
+font_size = 9
+font_color = Color(1, 1, 1, 0.78431374)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rqugq"]
+bg_color = Color(0.46666667, 0.38039216, 0.30588236, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.9137255, 0.84313726, 1)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jf26r"]
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.99607843, 0.63529414, 0.3372549, 1)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vuqvt"]
+bg_color = Color(0.19215687, 0.15686275, 0.12941177, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.99607843, 0.63529414, 0.3372549, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iqtc0"]
+bg_color = Color(0.99607843, 0.63529414, 0.3372549, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.99607843, 0.63529414, 0.3372549, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6lx7k"]
+bg_color = Color(0.19215687, 0.15686275, 0.12941177, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.9137255, 0.84313726, 1)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4mq11"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vuqvt"]
+
+[sub_resource type="Theme" id="Theme_mjo5c"]
+Button/colors/font_color = Color(1, 0.9137255, 0.84313726, 1)
+Button/colors/font_disabled_color = Color(0.5764706, 0.61960787, 0.6392157, 1)
+Button/colors/font_focus_color = Color(1, 0.9137255, 0.84313726, 1)
+Button/colors/font_hover_color = Color(0.5764706, 0.61960787, 0.6392157, 1)
+Button/colors/font_hover_pressed_color = Color(0.46666667, 0.38039216, 0.30588236, 1)
+Button/colors/font_outline_color = Color(0.19215687, 0.15686275, 0.12941177, 1)
+Button/colors/font_pressed_color = Color(0.19215687, 0.15686275, 0.12941177, 1)
+Button/colors/icon_disabled_color = Color(0.5764706, 0.61960787, 0.6392157, 1)
+Button/colors/icon_focus_color = Color(0.60784316, 0.42352942, 0.27450982, 1)
+Button/colors/icon_hover_color = Color(0.60784316, 0.42352942, 0.27450982, 1)
+Button/colors/icon_hover_pressed_color = Color(0.46666667, 0.38039216, 0.30588236, 1)
+Button/colors/icon_normal_color = Color(1, 0.9137255, 0.84313726, 1)
+Button/colors/icon_pressed_color = Color(0.19215687, 0.15686275, 0.12941177, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 18
+Button/fonts/font = ExtResource("5_jcmyd")
+Button/styles/disabled = SubResource("StyleBoxFlat_rqugq")
+Button/styles/focus = SubResource("StyleBoxFlat_jf26r")
+Button/styles/hover = SubResource("StyleBoxFlat_vuqvt")
+Button/styles/hover_pressed = SubResource("StyleBoxFlat_iqtc0")
+Button/styles/normal = SubResource("StyleBoxFlat_6lx7k")
+Button/styles/pressed = SubResource("StyleBoxFlat_iqtc0")
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0)
+Label/constants/line_spacing = 3
+Label/constants/outline_size = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/constants/shadow_outline_size = 1
+Label/font_sizes/font_size = 10
+Label/fonts/font = ExtResource("6_dkbqp")
+Label/styles/focus = SubResource("StyleBoxFlat_4mq11")
+Label/styles/normal = SubResource("StyleBoxEmpty_vuqvt")
+RichTextLabel/font_sizes/bold_font_size = 10
+RichTextLabel/font_sizes/normal_font_size = 10
+RichTextLabel/fonts/bold_font = ExtResource("4_awu2c")
+RichTextLabel/fonts/normal_font = ExtResource("6_dkbqp")
+
+[sub_resource type="Theme" id="Theme_gcf2r"]
+Button/colors/font_color = Color(1, 0.9137255, 0.84313726, 1)
+Button/colors/font_disabled_color = Color(0.5764706, 0.61960787, 0.6392157, 1)
+Button/colors/font_focus_color = Color(1, 0.9137255, 0.84313726, 1)
+Button/colors/font_hover_color = Color(0.5764706, 0.61960787, 0.6392157, 1)
+Button/colors/font_hover_pressed_color = Color(0.46666667, 0.38039216, 0.30588236, 1)
+Button/colors/font_outline_color = Color(0.19215687, 0.15686275, 0.12941177, 1)
+Button/colors/font_pressed_color = Color(0.19215687, 0.15686275, 0.12941177, 1)
+Button/colors/icon_disabled_color = Color(0.5764706, 0.61960787, 0.6392157, 1)
+Button/colors/icon_focus_color = Color(0.60784316, 0.42352942, 0.27450982, 1)
+Button/colors/icon_hover_color = Color(0.60784316, 0.42352942, 0.27450982, 1)
+Button/colors/icon_hover_pressed_color = Color(0.46666667, 0.38039216, 0.30588236, 1)
+Button/colors/icon_normal_color = Color(1, 0.9137255, 0.84313726, 1)
+Button/colors/icon_pressed_color = Color(0.19215687, 0.15686275, 0.12941177, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 18
+Button/fonts/font = ExtResource("5_jcmyd")
+Button/styles/disabled = SubResource("StyleBoxFlat_rqugq")
+Button/styles/focus = SubResource("StyleBoxFlat_jf26r")
+Button/styles/hover = SubResource("StyleBoxFlat_vuqvt")
+Button/styles/hover_pressed = SubResource("StyleBoxFlat_iqtc0")
+Button/styles/normal = SubResource("StyleBoxFlat_6lx7k")
+Button/styles/pressed = SubResource("StyleBoxFlat_iqtc0")
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0)
+Label/constants/line_spacing = 3
+Label/constants/outline_size = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/constants/shadow_outline_size = 1
+Label/font_sizes/font_size = 10
+Label/fonts/font = ExtResource("6_dkbqp")
+Label/styles/focus = SubResource("StyleBoxFlat_4mq11")
+Label/styles/normal = SubResource("StyleBoxEmpty_vuqvt")
+RichTextLabel/font_sizes/bold_font_size = 10
+RichTextLabel/font_sizes/normal_font_size = 10
+RichTextLabel/fonts/bold_font = ExtResource("4_awu2c")
+RichTextLabel/fonts/normal_font = ExtResource("6_dkbqp")
+
+[node name="InventorySlot" type="Control" unique_id=1826707204]
+custom_minimum_size = Vector2(24, 24)
+custom_maximum_size = Vector2(24, 24)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.0
+offset_top = -12.0
+offset_right = 12.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mpedq")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=747740022]
+custom_minimum_size = Vector2(24, 24)
+custom_maximum_size = Vector2(24, 24)
+layout_mode = 0
+offset_right = 48.0
+offset_bottom = 48.0
+texture = ExtResource("2_gp2a8")
+region_rect = Rect2(0, 0, 64, 64)
+
+[node name="itemIcon" type="Sprite2D" parent="NinePatchRect" unique_id=32217099]
+position = Vector2(12, 12)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_mpedq")
+
+[node name="itemQuantity" type="Label" parent="NinePatchRect" unique_id=163800679]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 9.0
+offset_bottom = 8.0
+text = "99"
+label_settings = SubResource("LabelSettings_lo6bu")
+
+[node name="itemButton" type="Button" parent="." unique_id=1174674044]
+custom_minimum_size = Vector2(48, 48)
+custom_maximum_size = Vector2(48, 48)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 24.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_oltxx")
+flat = true
+
+[node name="detailPanel" type="ColorRect" parent="." unique_id=1872022686]
+visible = false
+layout_mode = 0
+offset_top = -37.0
+offset_right = 60.0
+offset_bottom = -2.0
+color = Color(0.3647059, 0.2509804, 0.21568628, 1)
+
+[node name="itemName" type="Label" parent="detailPanel" unique_id=243538090]
+layout_mode = 1
+offset_left = 2.0
+offset_right = 25.0
+offset_bottom = 10.0
+text = "Name"
+label_settings = SubResource("LabelSettings_6i67t")
+
+[node name="itemType" type="Label" parent="detailPanel" unique_id=63535140]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 2.0
+offset_top = -5.0
+offset_right = 25.0
+offset_bottom = 5.0
+grow_vertical = 2
+text = "Type"
+label_settings = SubResource("LabelSettings_1ab01")
+
+[node name="itemEffect" type="Label" parent="detailPanel" unique_id=122471333]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -10.0
+offset_right = 27.0
+grow_vertical = 0
+text = "Effect"
+label_settings = SubResource("LabelSettings_f13jp")
+
+[node name="usagePanel" type="ColorRect" parent="." unique_id=1114349122]
+visible = false
+layout_mode = 0
+offset_top = -37.0
+offset_right = 60.0
+offset_bottom = -2.0
+color = Color(0.3647059, 0.2509804, 0.21568628, 1)
+
+[node name="use" type="Button" parent="usagePanel" unique_id=630782811]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 1.0
+offset_top = 2.0
+offset_right = -1.0
+offset_bottom = 16.0
+grow_horizontal = 2
+theme = SubResource("Theme_mjo5c")
+theme_override_fonts/font = ExtResource("6_dkbqp")
+theme_override_font_sizes/font_size = 10
+text = "use"
+
+[node name="drop" type="Button" parent="usagePanel" unique_id=587013168]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -16.0
+offset_right = -1.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_gcf2r")
+theme_override_fonts/font = ExtResource("6_dkbqp")
+theme_override_font_sizes/font_size = 10
+text = "drop"
+
+[connection signal="mouse_entered" from="itemButton" to="." method="_on_item_button_mouse_entered"]
+[connection signal="mouse_exited" from="itemButton" to="." method="_on_item_button_mouse_exited"]
+[connection signal="pressed" from="itemButton" to="." method="_on_item_button_pressed"]
+[connection signal="pressed" from="usagePanel/use" to="." method="_on_use_pressed"]
+[connection signal="pressed" from="usagePanel/drop" to="." method="_on_drop_pressed"]
