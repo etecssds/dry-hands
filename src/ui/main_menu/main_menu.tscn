@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dys1j1xuhetiq" path="res://assets/ground.png" id="3_s4pem"]
 [ext_resource type="Texture2D" uid="uid://dneinntia14cc" path="res://assets/ui/hands.png" id="4_xio0d"]
 [ext_resource type="LabelSettings" uid="uid://bw3ow7if1qx7t" path="res://ui/main_menu/title_label.tres" id="5_tf5ef"]
-[ext_resource type="Texture2D" uid="uid://d1xdeu1wrym1i" path="res://assets/ui/menu_container.png" id="6_qao3l"]
+[ext_resource type="Texture2D" uid="uid://d1xdeu1wrym1i" path="res://assets/ui/frames/menu_container.png" id="6_qao3l"]
 [ext_resource type="Texture2D" uid="uid://6buh1nsjesoq" path="res://assets/ui/credits/credits.png" id="7_tf5ef"]
 [ext_resource type="Texture2D" uid="uid://b85rmo76llc08" path="res://assets/ui/credits/credits_pressed.png" id="8_qao3l"]
 [ext_resource type="FontFile" uid="uid://i3itppdqun3j" path="res://assets/fonts/Not Jam Chunky Sans 9.ttf" id="9_bpbph"]
