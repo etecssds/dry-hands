@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://xavrgqxwuyox" path="res://assets/icons_food/bread.png" id="9_ghnt0"]
 [ext_resource type="Texture2D" uid="uid://bslksjgrkwqow" path="res://assets/icons_food/tapioca_mandioca.png" id="10_5i4kv"]
 [ext_resource type="PackedScene" uid="uid://cprc8snmswyeh" path="res://ui/inventory_sistem/inventoryUI.tscn" id="10_jhqhn"]
+[ext_resource type="Texture2D" uid="uid://d1xdeu1wrym1i" path="res://assets/ui/frames/menu_container.png" id="16_bntk2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wjoo6"]
 texture = ExtResource("1_aatsp")
@@ -528,6 +529,44 @@ layer = 2
 [node name="InventoryLayer" type="CanvasLayer" parent="." unique_id=1632786902]
 
 [node name="InventoryUi" parent="InventoryLayer" unique_id=1280498151 instance=ExtResource("10_jhqhn")]
+
+[node name="MobileControlsLayer" type="CanvasLayer" parent="." unique_id=2068808273]
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="MobileControlsLayer" unique_id=73928806]
+position = Vector2(24, 216)
+texture_normal = ExtResource("16_bntk2")
+action = "move_down"
+visibility_mode = 1
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="MobileControlsLayer" unique_id=1163542813]
+position = Vector2(8, 200)
+texture_normal = ExtResource("16_bntk2")
+action = "move_left"
+visibility_mode = 1
+
+[node name="TouchScreenButton3" type="TouchScreenButton" parent="MobileControlsLayer" unique_id=2110485945]
+position = Vector2(24, 184)
+texture_normal = ExtResource("16_bntk2")
+action = "move_up"
+visibility_mode = 1
+
+[node name="TouchScreenButton4" type="TouchScreenButton" parent="MobileControlsLayer" unique_id=2144011865]
+position = Vector2(40, 200)
+texture_normal = ExtResource("16_bntk2")
+action = "move_right"
+visibility_mode = 1
+
+[node name="TouchScreenButton5" type="TouchScreenButton" parent="MobileControlsLayer" unique_id=676369346]
+position = Vector2(280, 200)
+texture_normal = ExtResource("16_bntk2")
+action = "interact"
+visibility_mode = 1
+
+[node name="TouchScreenButton6" type="TouchScreenButton" parent="MobileControlsLayer" unique_id=507978580]
+position = Vector2(296, 8)
+texture_normal = ExtResource("16_bntk2")
+action = "pause"
+visibility_mode = 1
 
 [node name="Cutscene" type="AnimationPlayer" parent="." unique_id=1452212369]
 libraries/ = SubResource("AnimationLibrary_tysf0")
