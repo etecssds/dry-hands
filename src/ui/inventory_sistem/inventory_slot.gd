@@ -1,22 +1,25 @@
 extends Control
 
-@onready var icon: Sprite2D = $NinePatchRect/itemIcon
-@onready var qtd: Label = $NinePatchRect/itemQuantity
+@onready var icon: Sprite2D = $itemButton/itemIcon
+@onready var qtd: Label = $itemButton/itemQuantity
 @onready var detailPanel: ColorRect = $detailPanel
 @onready var detailName: Label = $detailPanel/itemName
 @onready var detailType: Label = $detailPanel/itemType
 @onready var detailEffect: Label = $detailPanel/itemEffect
 @onready var usagePanel: ColorRect = $usagePanel
+@onready var buttonTexture: TextureButton = $itemButton
 
 var item = null
 
 func _on_item_button_pressed() -> void:
 	if item != null:
+		buttonTexture.texture_normal = buttonTexture.texture_hover
 		usagePanel.visible = !usagePanel.visible
 		detailPanel.visible = false
 
 func _on_item_button_mouse_entered() -> void:
 	if item != null:
+		buttonTexture.texture_normal = load("res://assets/ui/frames/hot bar selecionada.png")
 		usagePanel.visible = false
 		detailPanel.visible = true
 
