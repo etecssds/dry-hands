@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://b8ajg02bewk22"]
 
 [ext_resource type="Script" uid="uid://bimrf4cu6np86" path="res://ui/dialog/dialog.gd" id="1_b7qic"]
-[ext_resource type="Texture2D" uid="uid://d1xdeu1wrym1i" path="res://assets/ui/frames/menu_container.png" id="2_d4hgk"]
+[ext_resource type="Texture2D" uid="uid://cuusxdi0h66i2" path="res://assets/ui/frames/frame3.png" id="2_d4hgk"]
 [ext_resource type="Texture2D" uid="uid://dfbj0w2rut56q" path="res://assets/ui/frames/frame_character.png" id="3_d4hgk"]
 [ext_resource type="Theme" uid="uid://bysvkw6b1cmyg" path="res://ui/ui_theme.tres" id="4_b7qic"]
 [ext_resource type="FontFile" uid="uid://i3itppdqun3j" path="res://assets/fonts/Not Jam Chunky Sans 9.ttf" id="4_d4hgk"]
 
 [node name="Dialog" type="Control" unique_id=1607766323]
+visibility_layer = 2
 custom_minimum_size = Vector2(260, 70)
 custom_maximum_size = Vector2(260, 70)
 layout_mode = 3
@@ -29,10 +30,10 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_d4hgk")
 region_rect = Rect2(0, 0, 16, 16)
-patch_margin_left = 1
-patch_margin_top = 1
-patch_margin_right = 1
-patch_margin_bottom = 1
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
 
 [node name="Content" type="HBoxContainer" parent="DialogBorder" unique_id=1233250766]
 custom_minimum_size = Vector2(252, 62)

@@ -2,15 +2,17 @@ extends Node
 
 @onready var inventorySlotScene = preload("res://ui/inventory_sistem/inventorySlot.tscn")
 
-var inventory = []
+var vidaFomeNode: Node = null
+var inventory: Array = []
 var characterNode: Node = null
 
 signal inventoryUpdate
 signal dialogOpened
 signal dialogCLosed
+signal playerDied
 
 func _ready() -> void:
-	inventory.resize(4)
+	restart_inventory()
 
 func add_item(item):
 	for i in range(inventory.size()):
@@ -40,6 +42,8 @@ func remove_item(item):
 	
 func set_character_reference(character) ->void:
 	characterNode = character
+func set_VidaFome_reference(vidaFome) ->void:
+	vidaFomeNode = vidaFome
 	
 func ajust_drop_position(position):
 	var dropArea =20
@@ -58,4 +62,8 @@ func drop_item(itemData, dropPosition):
 	dropPosition = ajust_drop_position(dropPosition)
 	itemInstance.global_position = dropPosition
 	get_tree().current_scene.get_node("items").add_child(itemInstance)
+	
+func restart_inventory():
+	inventory = []
+	inventory.resize(4)
 	

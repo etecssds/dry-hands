@@ -3,9 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://b0jaggxkwbusd" path="res://characters/base_character.tscn" id="1_55lds"]
 [ext_resource type="Texture2D" uid="uid://dy63skkyjtgkl" path="res://characters/fabiano/fabiano.png" id="2_2da6j"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5xh0r"]
-radius = 3.0
-height = 14.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3kd8x"]
+size = Vector2(23, 20)
 
 [sub_resource type="Animation" id="Animation_0rbtg"]
 length = 0.001
@@ -145,16 +144,15 @@ _data = {
 [node name="SVitoria" unique_id=1240929559 instance=ExtResource("1_55lds")]
 
 [node name="Sprite" parent="." index="0" unique_id=204840225]
-position = Vector2(-0.5, -8)
+position = Vector2(0, -9)
 texture = ExtResource("2_2da6j")
 hframes = 4
 vframes = 3
 
 [node name="Collision" parent="." index="1" unique_id=1242892702]
-visible = false
 show_behind_parent = false
-position = Vector2(0, -1)
-shape = SubResource("CapsuleShape2D_5xh0r")
+position = Vector2(-3.2783543e-08, 0.75)
+shape = SubResource("RectangleShape2D_3kd8x")
 
 [node name="Animation" parent="." index="2" unique_id=549782095]
 libraries/ = SubResource("AnimationLibrary_qenwo")

@@ -8,6 +8,7 @@ extends Control
 @onready var detailEffect: Label = $detailPanel/itemEffect
 @onready var usagePanel: ColorRect = $usagePanel
 @onready var buttonTexture: TextureButton = $itemButton
+@onready var audioPlayer: AudioStreamPlayer = $AudioStreamPlayer
 
 var item = null
 
@@ -42,6 +43,8 @@ func setItem(newItem):
 
 
 func _on_drop_pressed() -> void:
+	sonudSelector()
+	await audioPlayer.finished
 	if item != null:
 		var dropPosition = GlobalInventory.characterNode.global_position
 		var dropOffset = Vector2(0,20)
@@ -50,7 +53,23 @@ func _on_drop_pressed() -> void:
 		usagePanel.visible = false
 
 func _on_use_pressed() -> void:
+	sonudSelector()
+	await audioPlayer.finished
 	if item != null and item["effect"] != "":
-		if item["effect"] == "sapato":
-			get_tree().current_scene
+		if item["effect"] == "+ENERGIA":
+			GlobalInventory.vidaFomeNode.receber_cura(1,1)
+		if item["effect"] == "++ENERGIA":
+			GlobalInventory.vidaFomeNode.receber_cura(1,2)
+		if item["effect"] == "+++ENERGIA":
+			GlobalInventory.vidaFomeNode.receber_cura(2,3)
 		GlobalInventory.remove_item(item)
+
+func sonudSelector():
+	var sound: int = randi_range(1,3)
+	if sound == 1:
+		audioPlayer.stream = load("res://assets/sounds/click1.wav")
+	elif sound == 2: 
+		audioPlayer.stream = load("res://assets/sounds/click2.mp3")
+	elif sound == 3:
+		audioPlayer.stream = load("res://assets/sounds/click3.ogg")
+	audioPlayer.play()

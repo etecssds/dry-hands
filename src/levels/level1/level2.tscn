@@ -1,0 +1,202 @@
+[gd_scene format=3 uid="uid://dlrstr8m82me7"]
+
+[ext_resource type="Script" uid="uid://clbolnxk36o2k" path="res://levels/level1/level_1.gd" id="1_etgjv"]
+[ext_resource type="Texture2D" uid="uid://dys1j1xuhetiq" path="res://assets/ground.png" id="3_5lsy8"]
+[ext_resource type="Texture2D" uid="uid://cesphr8kyp1pp" path="res://assets/ui/cursor.png" id="4_to0dd"]
+[ext_resource type="PackedScene" uid="uid://2f1jxqoa2lnp" path="res://ui/missionBoard/mission_board.tscn" id="5_0q4fe"]
+[ext_resource type="PackedScene" uid="uid://cl2fk5q11iwns" path="res://characters/svitoria/svitoria.tscn" id="6_owuyq"]
+[ext_resource type="PackedScene" uid="uid://pge00srplj6d" path="res://ui/vida/vidaFome.tscn" id="9_gxe0j"]
+[ext_resource type="PackedScene" uid="uid://cprc8snmswyeh" path="res://ui/inventory_sistem/inventoryUI.tscn" id="10_ubl52"]
+[ext_resource type="Texture2D" uid="uid://2ruyrbrhefrc" path="res://assets/mobileIcons/seta.png" id="11_6e0tt"]
+[ext_resource type="Texture2D" uid="uid://57va5acqgpg8" path="res://assets/mobileIcons/acao.png" id="12_xdwvg"]
+[ext_resource type="Texture2D" uid="uid://dd18oq5hpsjbh" path="res://assets/mobileIcons/pause.png" id="13_kqusp"]
+
+[sub_resource type="TileSet" id="TileSet_w1627"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c3sxu"]
+texture = ExtResource("3_5lsy8")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_828d7"]
+physics_layer_0/collision_layer = 1
+sources/2 = SubResource("TileSetAtlasSource_c3sxu")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v1ci3"]
+texture = ExtResource("4_to0dd")
+0:0/size_in_atlas = Vector2i(2, 2)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_6i67t"]
+sources/0 = SubResource("TileSetAtlasSource_v1ci3")
+
+[sub_resource type="Animation" id="Animation_aatsp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fabiano/Camera2D:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 128)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fabiano:_can_move")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_sfwlx"]
+resource_name = "intro"
+length = 7.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fabiano/Camera2D:offset")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(0.4, 1),
+"update": 0,
+"values": [Vector2(0, 128), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fabiano:_can_move")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tysf0"]
+_data = {
+&"RESET": SubResource("Animation_aatsp"),
+&"intro": SubResource("Animation_sfwlx")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6i67t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tx1ys"]
+
+[node name="Level1" type="Node2D" unique_id=2116533260]
+script = ExtResource("1_etgjv")
+_jsonDictionary = "res://ui/dialog/dialogs/intro.json"
+
+[node name="Level1Map" type="Node2D" parent="." unique_id=163271074]
+
+[node name="Path" type="TileMapLayer" parent="Level1Map" unique_id=510984633]
+position = Vector2(-1, 0)
+tile_set = SubResource("TileSet_w1627")
+
+[node name="Ground" type="TileMapLayer" parent="Level1Map" unique_id=1173943992]
+tile_set = SubResource("TileSet_828d7")
+
+[node name="Rocks" type="TileMapLayer" parent="Level1Map" unique_id=1919477487]
+tile_set = SubResource("TileSet_6i67t")
+
+[node name="Fabiano" parent="." unique_id=1240929559 instance=ExtResource("6_owuyq")]
+_move_speed = 0.01
+
+[node name="Sprite" parent="Fabiano" index="0" unique_id=204840225]
+position = Vector2(0, 0)
+
+[node name="Camera2D" parent="Fabiano" index="3" unique_id=2115678668]
+offset = Vector2(0, 128)
+
+[node name="DialogLayer" type="CanvasLayer" parent="." unique_id=1695856468]
+layer = 2
+
+[node name="PauseMenuLayer" type="CanvasLayer" parent="." unique_id=32760239]
+layer = 3
+
+[node name="SceneLayer" type="CanvasLayer" parent="." unique_id=1632786902]
+
+[node name="MissionBoard" parent="SceneLayer" unique_id=679219356 instance=ExtResource("5_0q4fe")]
+
+[node name="VidaSistem" parent="SceneLayer" unique_id=1415249422 instance=ExtResource("9_gxe0j")]
+visibility_layer = 1
+
+[node name="InventoryUi" parent="SceneLayer" unique_id=1280498151 instance=ExtResource("10_ubl52")]
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 1.0
+offset_bottom = -1.0
+
+[node name="MobileControlsLayer" type="CanvasLayer" parent="." unique_id=2068808273]
+layer = 2
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="MobileControlsLayer" unique_id=73928806]
+position = Vector2(40, 232)
+rotation = 3.1415927
+texture_normal = ExtResource("11_6e0tt")
+action = "move_down"
+visibility_mode = 1
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="MobileControlsLayer" unique_id=1163542813]
+position = Vector2(8, 216)
+rotation = -1.5707964
+texture_normal = ExtResource("11_6e0tt")
+action = "move_left"
+visibility_mode = 1
+
+[node name="TouchScreenButton3" type="TouchScreenButton" parent="MobileControlsLayer" unique_id=2110485945]
+position = Vector2(24, 184)
+texture_normal = ExtResource("11_6e0tt")
+action = "move_up"
+visibility_mode = 1
+
+[node name="TouchScreenButton4" type="TouchScreenButton" parent="MobileControlsLayer" unique_id=2144011865]
+position = Vector2(56, 200)
+rotation = 1.5707964
+texture_normal = ExtResource("11_6e0tt")
+action = "move_right"
+visibility_mode = 1
+
+[node name="TouchScreenButton5" type="TouchScreenButton" parent="MobileControlsLayer" unique_id=676369346]
+position = Vector2(280, 200)
+texture_normal = ExtResource("12_xdwvg")
+action = "interact"
+visibility_mode = 1
+
+[node name="TouchScreenButton6" type="TouchScreenButton" parent="MobileControlsLayer" unique_id=507978580]
+position = Vector2(296, 8)
+texture_normal = ExtResource("13_kqusp")
+action = "pause"
+visibility_mode = 1
+
+[node name="Cutscene" type="AnimationPlayer" parent="." unique_id=1452212369]
+libraries/ = SubResource("AnimationLibrary_tysf0")
+
+[node name="Mission1" type="Area2D" parent="." unique_id=1845243959]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mission1" unique_id=1554054071]
+shape = SubResource("RectangleShape2D_6i67t")
+
+[node name="Mission2" type="Area2D" parent="." unique_id=1137492392]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mission2" unique_id=1811269683]
+shape = SubResource("RectangleShape2D_tx1ys")
+
+[node name="Mission3" type="Area2D" parent="." unique_id=1716199804]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mission3" unique_id=1242538202]
+shape = SubResource("RectangleShape2D_tx1ys")
+
+[editable path="Fabiano"]

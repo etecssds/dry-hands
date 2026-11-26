@@ -11,10 +11,14 @@
 [ext_resource type="Texture2D" uid="uid://r61phjpmuay2" path="res://assets/health_food_icons/hungry2.png" id="10_7sc4i"]
 [ext_resource type="Texture2D" uid="uid://cvie5doynxqra" path="res://assets/health_food_icons/hungry3.png" id="11_80cx4"]
 [ext_resource type="Texture2D" uid="uid://dstdlyhfgf3ay" path="res://assets/health_food_icons/hungry4.png" id="12_e8heu"]
-[ext_resource type="Texture2D" uid="uid://fjvovjytujpu" path="res://assets/health_food_icons/hungry5.png" id="13_rvswv"]
-[ext_resource type="Texture2D" uid="uid://bybarfq7gyvtr" path="res://assets/health_food_icons/hungry6.png" id="14_boyg6"]
+[ext_resource type="Texture2D" uid="uid://cj1hakrpyuv6s" path="res://assets/health_food_icons/hungry5.png" id="13_rvswv"]
+[ext_resource type="Texture2D" uid="uid://dkd52da1s2m3b" path="res://assets/health_food_icons/hungry6.png" id="14_boyg6"]
+[ext_resource type="LabelSettings" uid="uid://bw3ow7if1qx7t" path="res://ui/main_menu/title_label.tres" id="14_mnpaw"]
 
-[node name="Game" type="Node2D" unique_id=1415249422]
+[node name="VidaFome" type="Control" unique_id=447067857]
+visibility_layer = 4
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_3kd8x")
 h_sprite1 = ExtResource("2_eow3j")
 h_sprite2 = ExtResource("3_j5wjh")
@@ -29,28 +33,50 @@ hungry4 = ExtResource("12_e8heu")
 hungry5 = ExtResource("13_rvswv")
 hungry6 = ExtResource("14_boyg6")
 
-[node name="Interface" type="CanvasLayer" parent="." unique_id=626406768]
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Interface" unique_id=351323834]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=351323834]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="VidaContainer" type="HBoxContainer" parent="Interface/VBoxContainer" unique_id=2062591914]
+[node name="VidaContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=2062591914]
 layout_mode = 2
 
-[node name="FomeContainer" type="HBoxContainer" parent="Interface/VBoxContainer" unique_id=711565808]
+[node name="FomeContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=711565808]
 layout_mode = 2
 
-[node name="MorteLabel" type="Label" parent="Interface" unique_id=353605585]
-offset_left = 460.0
-offset_top = 174.0
-offset_right = 664.0
-offset_bottom = 256.0
+[node name="Container" type="CanvasLayer" parent="." unique_id=215314733]
+layer = 2
+
+[node name="Background" type="ColorRect" parent="Container" unique_id=1083156]
+top_level = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.9529412, 0, 0, 0.39607844)
+
+[node name="MorteLabel" type="Label" parent="Container" unique_id=353605585]
+show_behind_parent = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -122.0
+offset_top = -18.5
+offset_right = 122.0
+offset_bottom = 18.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
 text = "VOCÊ MORREU"
+label_settings = ExtResource("14_mnpaw")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="DamageOverlay" type="ColorRect" parent="Interface" unique_id=1219404890]
+[node name="DamageOverlay" type="ColorRect" parent="." unique_id=1219404890]
+layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -60,11 +86,12 @@ mouse_filter = 2
 color = Color(1, 0, 0, 0)
 
 [node name="FomeTimer" type="Timer" parent="." unique_id=709283805 groups=["timer_fome"]]
-wait_time = 10.0
+wait_time = 5.0
 autostart = true
 
-[node name="SedeTimer" type="Timer" parent="." unique_id=1217542621]
-wait_time = 4.0
+[node name="deathTimer" type="Timer" parent="." unique_id=224053939 groups=["timer_fome"]]
+wait_time = 2.0
 autostart = true
 
 [connection signal="timeout" from="FomeTimer" to="." method="_on_fome_timer_timeout"]
+[connection signal="timeout" from="deathTimer" to="." method="_on_death_timer_timeout"]

@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://b8qgf1i35ufaw" path="res://assets/fonts/dry-fountain-bold.ttf" id="4_awu2c"]
 [ext_resource type="FontFile" uid="uid://d3jvo6qsud148" path="res://assets/fonts/Pixuf.ttf" id="5_jcmyd"]
 [ext_resource type="FontFile" uid="uid://c4rmkl7snscsp" path="res://assets/fonts/dry-fountain-regular.ttf" id="6_dkbqp"]
+[ext_resource type="AudioStream" uid="uid://bxsk6n4xw2bda" path="res://assets/sounds/click2.mp3" id="8_xarr1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_lo6bu"]
 font = ExtResource("4_awu2c")
@@ -305,6 +306,10 @@ theme = SubResource("Theme_gcf2r")
 theme_override_fonts/font = ExtResource("6_dkbqp")
 theme_override_font_sizes/font_size = 10
 text = "drop"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2094854574]
+stream = ExtResource("8_xarr1")
+volume_db = -15.0
 
 [connection signal="mouse_entered" from="itemButton" to="." method="_on_item_button_mouse_entered"]
 [connection signal="mouse_exited" from="itemButton" to="." method="_on_item_button_mouse_exited"]
