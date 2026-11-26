@@ -1,6 +1,7 @@
 extends Control
 class_name DialogScreen
 
+
 @onready var _name: Label = $DialogBorder/Content/Text/Name
 @onready var _dialog: RichTextLabel = $DialogBorder/Content/Text/Dialog
 @onready var _faceSet: TextureRect = $DialogBorder/Content/FaceBorder/FaceSet
@@ -8,13 +9,14 @@ class_name DialogScreen
 var _step: float = 0.025
 var id: StringName = "start"
 var data: Dictionary
-
 var _tween: Tween
 
 
 func _ready() -> void:
 	if not data.is_empty():
 		_initializeDialog()
+		GlobalInventory.dialogOpened.emit()
+		GlobalInventory.characterNode._can_move = false
 
 
 func _input(event: InputEvent) -> void:
@@ -28,6 +30,8 @@ func _input(event: InputEvent) -> void:
 			id = data[id]["next"]
 			if id == "end":
 				queue_free()
+				GlobalInventory.dialogCLosed.emit()
+				GlobalInventory.characterNode._can_move = true
 				return
 			_initializeDialog()
 

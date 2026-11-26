@@ -6,6 +6,8 @@ var inventory = []
 var characterNode: Node = null
 
 signal inventoryUpdate
+signal dialogOpened
+signal dialogCLosed
 
 func _ready() -> void:
 	inventory.resize(4)
