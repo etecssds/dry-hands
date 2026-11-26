@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dv05uyxomqxsq" path="res://assets/ui/close/close.png" id="11_tf5ef"]
 [ext_resource type="Texture2D" uid="uid://cgijqyrenn1d3" path="res://assets/ui/close/close_pressed.png" id="12_qao3l"]
 [ext_resource type="Texture2D" uid="uid://b3lh6hg4atanc" path="res://assets/ui/close/close_hover.png" id="13_lknku"]
+[ext_resource type="AudioStream" uid="uid://bxsk6n4xw2bda" path="res://assets/sounds/click2.mp3" id="14_qao3l"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1may8"]
 font = ExtResource("9_bpbph")
@@ -402,6 +403,10 @@ autowrap_mode = 3
 
 [node name="CreditsTransition" type="AnimationPlayer" parent="Credits" unique_id=297798650]
 libraries/ = SubResource("AnimationLibrary_qao3l")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1079052234]
+stream = ExtResource("14_qao3l")
+volume_db = -5.0
 
 [connection signal="pressed" from="LogoMenuVBox/ButtonsContainer/Buttons/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="LogoMenuVBox/ButtonsContainer/Buttons/Exit" to="." method="_on_exit_pressed"]

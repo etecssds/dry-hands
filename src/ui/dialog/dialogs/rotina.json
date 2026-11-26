@@ -1,0 +1,15 @@
+{
+	"start": {
+		"title": "Fabiano",
+		"dialog": "Temos muito trabalho pela frente.",
+		"faceSet": "res://characters/fabiano/fabiano_icon.png",
+		"next": "1"
+	},
+	"1": {
+		"title": "Sinhá Vitória",
+		"dialog": "Pelo menos agora temos onde morar e o que comer.",
+		"faceSet": "res://characters/svitoria/svitoria_icon.png",
+		"next": "end"
+	},
+	
+}

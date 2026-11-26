@@ -1,0 +1,14 @@
+{
+	"start": {
+		"title": "Fabiano",
+		"dialog": "Precisamos continuar. Talvez encontremos água mais adiante.",
+		"faceSet": "res://characters/fabiano/fabiano_icon.png",
+		"next": "1"
+	},
+	"1": {
+		"title": "Sinhá Vitória",
+		"dialog": "As crianças estão cansadas... não podemos ficar aqui",
+		"faceSet": "res://characters/svitoria/svitoria_icon.png",
+		"next": "end"
+	}
+}

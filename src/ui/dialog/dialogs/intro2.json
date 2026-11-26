@@ -1,0 +1,15 @@
+{
+	"start": {
+		"title": "Fabiano",
+		"dialog": "Parece que finalmente encontramos um lugar para ficar.",
+		"faceSet": "res://characters/fabiano/fabiano_icon.png",
+		"next": "1"
+	},
+	"1": {
+		"title": "Sinhá Vitória",
+		"dialog": "Agora podemos descansar um pouco e pensar no futuro.",
+		"faceSet": "res://characters/svitoria/svitoria_icon.png",
+		"next": "end"
+	}
+	
+}

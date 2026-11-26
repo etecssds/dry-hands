@@ -1,0 +1,15 @@
+{
+	"start": {
+		"title": "Fabiano",
+		"dialog": "Esse sol não dá trégua...",
+		"faceSet": "res://characters/fabiano/fabiano_icon.png",
+		"next": "1"
+	},
+	"1": {
+		"title": "Sinhá Vitória",
+		"dialog": "Precisamos continuar.",
+		"faceSet": "res://characters/svitoria/svitoria_icon.png",
+		"next": "end"
+	}
+}
+  

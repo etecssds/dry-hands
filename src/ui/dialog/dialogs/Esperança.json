@@ -1,0 +1,14 @@
+{
+	"start": {
+		"title": "Sinhá Vitória",
+		"dialog": "Olha... uma casa.",
+		"faceSet": "res://characters/svitoria/svitoria_icon.png",
+		"next": "1"
+	},
+	"1": {
+		"title": "Fabiano",
+		"dialog": "Talvez possamos ficar aqui.",
+		"faceSet": "res://characters/fabiano/fabiano_icon.png",
+		"next": "end"
+	}
+}

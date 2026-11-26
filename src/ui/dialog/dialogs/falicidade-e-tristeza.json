@@ -1,0 +1,14 @@
+{
+	"start": {
+		"title": "Sinhá Vitória",
+		"dialog": "Pelo menos agora temos comida e um lugar seguro.",
+		"faceSet": "res://characters/svitoria/svitoria_icon.png",
+		"next": "1"
+	},
+	"1": {
+		"title": "Fabiano",
+		"dialog": "Conseguimos melhorar nossa vida. Só espero que Baleia fique bem.",
+		"faceSet": "res://characters/fabiano/fabiano_icon.png",
+		"next": "end"
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"start": {
+		"title": "Fabiano",
+		"dialog": "Baleia está diferente ultimamente...",
+		"faceSet": "res://characters/fabiano/fabiano_icon.png",
+		"next": "1"
+	},
+	"1": {
+		"title": "Sinhá Vitória",
+		"dialog": "Ela parece cansada. Espero que não seja nada grave.",
+		"faceSet": "res://characters/svitoria/svitoria_icon.png",
+		"next": "end"
+	}
+}

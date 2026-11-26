@@ -1,5 +1,5 @@
 
-extends Node2D
+extends Control
 
 var vida = 5
 var fome = 5
@@ -29,8 +29,11 @@ var icones_fome = []
 
 
 func _ready():
+	$FomeTimer.paused = true
+	$Container.visible = false
 	GlobalInventory.dialogOpened.connect(func()->void: $FomeTimer.paused = true)
 	GlobalInventory.dialogCLosed.connect(func()->void: $FomeTimer.paused = false)
+	GlobalInventory.set_VidaFome_reference(self)
 	for i in range(5):
 		var coracao = TextureRect.new()
 		coracao.texture = h_sprite1
@@ -38,7 +41,7 @@ func _ready():
 		coracao.size = Vector2(16,16)
 		coracao.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 		coracao.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-		$Interface/VBoxContainer/VidaContainer.add_child(coracao)
+		$VBoxContainer/VidaContainer.add_child(coracao)
 		icones_vida.append(coracao)
 
 	for i in range(5):
@@ -48,7 +51,7 @@ func _ready():
 		comida.size = Vector2(16,16)
 		comida.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 		comida.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-		$Interface/VBoxContainer/FomeContainer.add_child(comida)
+		$VBoxContainer/FomeContainer.add_child(comida)
 		icones_fome.append(comida)
 	
 	atualizar_interface()
@@ -75,24 +78,7 @@ func atualizar_interface():
 			icones_vida[i].texture = textura_atual
 		else:
 			icones_vida[i].texture = h_sprite6
-
-
-func _input(event):
-	if morto:
-		return
-
-	if not (event is InputEventKey):
-		return
-
-	if not event.pressed or event.echo:
-		return
-
-	if event.keycode == KEY_F:
-		receber_cura()
-
-	elif event.keycode == KEY_D:
-		receber_dano()
-		
+	
 	
 func animar_dano(indice: int, textura_anterior: Texture2D):
 	var coracao = icones_vida[indice]
@@ -127,7 +113,7 @@ func animar_cura(indice: int):
 func receber_dano():
 	if not pode_receber_dano or morto or vida <= 0:
 		return
-
+	
 	pode_receber_dano = false
 
 	var indice_perdido = vida - 1
@@ -142,16 +128,18 @@ func receber_dano():
 	if vida == 0:
 		morto = true
 		print("Player morreu")
-		$Interface/MorteLabel.visible = true
+		$Container.visible = true
 
 	animar_dano(indice_perdido, textura_anterior)
 
+	if not is_inside_tree():
+		return
 	await get_tree().create_timer(1.0).timeout
 
 	pode_receber_dano = true
 	
 
-func receber_cura():
+func receber_cura(vidaAdicional: int, fomeAdicional:int):
 	if not pode_receber_cura or not pode_comer or morto:
 		return
 
@@ -163,9 +151,9 @@ func receber_cura():
 
 	var vida_anterior = vida
 	var fome_anterior = fome
-
-	fome = min(fome + 1, 5)
-	vida = min(vida + 1, 5)
+	
+	fome = min(fome + fomeAdicional, 5)
+	vida = min(vida + vidaAdicional, 5)
 
 	print("Fome:", fome)
 	print("Vida:", vida)
@@ -254,3 +242,11 @@ func _on_fome_timer_timeout() -> void:
 
 	print("Vida:", vida)
 	
+
+
+func _on_death_timer_timeout() -> void:
+	if morto:
+		GlobalInventory.playerDied.emit()
+	else:
+			return
+		
