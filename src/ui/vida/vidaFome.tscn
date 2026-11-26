@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://pge00srplj6d"]
+
+[ext_resource type="Script" uid="uid://iwc0qpkuj7om" path="res://ui/vida/vida.gd" id="1_3kd8x"]
+[ext_resource type="Texture2D" uid="uid://bpvm3afxf7me6" path="res://assets/health_food_icons/h_sprite1.png" id="2_eow3j"]
+[ext_resource type="Texture2D" uid="uid://dn28tow1g02rn" path="res://assets/health_food_icons/h_sprite2.png" id="3_j5wjh"]
+[ext_resource type="Texture2D" uid="uid://cpsmmgsppvfe4" path="res://assets/health_food_icons/h_sprite3.png" id="4_j5wjh"]
+[ext_resource type="Texture2D" uid="uid://mncabk6a62ja" path="res://assets/health_food_icons/h_sprite4.png" id="4_vef74"]
+[ext_resource type="Texture2D" uid="uid://c6xcquj510coe" path="res://assets/health_food_icons/h_sprite5.png" id="5_hve3p"]
+[ext_resource type="Texture2D" uid="uid://c5b4s53gnpp8s" path="res://assets/health_food_icons/h_sprite6.png" id="6_mfdv2"]
+[ext_resource type="Texture2D" uid="uid://v2woth4cda6k" path="res://assets/health_food_icons/hungry1.png" id="9_215e1"]
+[ext_resource type="Texture2D" uid="uid://r61phjpmuay2" path="res://assets/health_food_icons/hungry2.png" id="10_7sc4i"]
+[ext_resource type="Texture2D" uid="uid://cvie5doynxqra" path="res://assets/health_food_icons/hungry3.png" id="11_80cx4"]
+[ext_resource type="Texture2D" uid="uid://dstdlyhfgf3ay" path="res://assets/health_food_icons/hungry4.png" id="12_e8heu"]
+[ext_resource type="Texture2D" uid="uid://fjvovjytujpu" path="res://assets/health_food_icons/hungry5.png" id="13_rvswv"]
+[ext_resource type="Texture2D" uid="uid://bybarfq7gyvtr" path="res://assets/health_food_icons/hungry6.png" id="14_boyg6"]
+
+[node name="Game" type="Node2D" unique_id=1415249422]
+script = ExtResource("1_3kd8x")
+h_sprite1 = ExtResource("2_eow3j")
+h_sprite2 = ExtResource("3_j5wjh")
+h_sprite3 = ExtResource("4_j5wjh")
+h_sprite4 = ExtResource("4_vef74")
+h_sprite5 = ExtResource("5_hve3p")
+h_sprite6 = ExtResource("6_mfdv2")
+hungry1 = ExtResource("9_215e1")
+hungry2 = ExtResource("10_7sc4i")
+hungry3 = ExtResource("11_80cx4")
+hungry4 = ExtResource("12_e8heu")
+hungry5 = ExtResource("13_rvswv")
+hungry6 = ExtResource("14_boyg6")
+
+[node name="Interface" type="CanvasLayer" parent="." unique_id=626406768]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Interface" unique_id=351323834]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VidaContainer" type="HBoxContainer" parent="Interface/VBoxContainer" unique_id=2062591914]
+layout_mode = 2
+
+[node name="FomeContainer" type="HBoxContainer" parent="Interface/VBoxContainer" unique_id=711565808]
+layout_mode = 2
+
+[node name="MorteLabel" type="Label" parent="Interface" unique_id=353605585]
+offset_left = 460.0
+offset_top = 174.0
+offset_right = 664.0
+offset_bottom = 256.0
+text = "VOCÊ MORREU"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DamageOverlay" type="ColorRect" parent="Interface" unique_id=1219404890]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 0, 0, 0)
+
+[node name="FomeTimer" type="Timer" parent="." unique_id=709283805 groups=["timer_fome"]]
+wait_time = 10.0
+autostart = true
+
+[node name="SedeTimer" type="Timer" parent="." unique_id=1217542621]
+wait_time = 4.0
+autostart = true
+
+[connection signal="timeout" from="FomeTimer" to="." method="_on_fome_timer_timeout"]

@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://xavrgqxwuyox" path="res://assets/icons_food/bread.png" id="9_ghnt0"]
 [ext_resource type="Texture2D" uid="uid://bslksjgrkwqow" path="res://assets/icons_food/tapioca_mandioca.png" id="10_5i4kv"]
 [ext_resource type="PackedScene" uid="uid://cprc8snmswyeh" path="res://ui/inventory_sistem/inventoryUI.tscn" id="10_jhqhn"]
-[ext_resource type="PackedScene" uid="uid://deckv15mdk3r0" path="res://ui/vida/vidaFome.tscn" id="13_ghnt0"]
+[ext_resource type="PackedScene" uid="uid://pge00srplj6d" path="res://ui/vida/vidaFome.tscn" id="13_ghnt0"]
 [ext_resource type="Texture2D" uid="uid://d1xdeu1wrym1i" path="res://assets/ui/frames/menu_container.png" id="16_bntk2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wjoo6"]
