@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rbp04gq44xic"
-valid=false
+uid="uid://bviavtwchj3cs"
+path="res://.godot/imported/PEDRA.png-2d9144cf7ca372fd6cca6e427b15f6fa.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://assets/home_things/tapete-casa.png"
+source_file="res://assets/home_things/PEDRA.png"
+dest_files=["res://.godot/imported/PEDRA.png-2d9144cf7ca372fd6cca6e427b15f6fa.ctex"]
 
 [params]
 

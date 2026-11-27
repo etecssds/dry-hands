@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://dlrstr8m82me7"]
 
-[ext_resource type="Script" uid="uid://clbolnxk36o2k" path="res://levels/level1/level_1.gd" id="1_etgjv"]
-[ext_resource type="Texture2D" uid="uid://dys1j1xuhetiq" path="res://assets/ground.png" id="3_5lsy8"]
-[ext_resource type="Texture2D" uid="uid://cesphr8kyp1pp" path="res://assets/ui/cursor.png" id="4_to0dd"]
+[ext_resource type="Script" uid="uid://bj18do4oyqh5f" path="res://levels/level2/level2.gd" id="1_2xai0"]
+[ext_resource type="PackedScene" uid="uid://qkx61gijv3xw" path="res://levels/level2/level_2_map.res" id="2_db1li"]
 [ext_resource type="PackedScene" uid="uid://2f1jxqoa2lnp" path="res://ui/missionBoard/mission_board.tscn" id="5_0q4fe"]
 [ext_resource type="PackedScene" uid="uid://cl2fk5q11iwns" path="res://characters/svitoria/svitoria.tscn" id="6_owuyq"]
 [ext_resource type="PackedScene" uid="uid://pge00srplj6d" path="res://ui/vida/vidaFome.tscn" id="9_gxe0j"]
@@ -10,25 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://2ruyrbrhefrc" path="res://assets/mobileIcons/seta.png" id="11_6e0tt"]
 [ext_resource type="Texture2D" uid="uid://57va5acqgpg8" path="res://assets/mobileIcons/acao.png" id="12_xdwvg"]
 [ext_resource type="Texture2D" uid="uid://dd18oq5hpsjbh" path="res://assets/mobileIcons/pause.png" id="13_kqusp"]
-
-[sub_resource type="TileSet" id="TileSet_w1627"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c3sxu"]
-texture = ExtResource("3_5lsy8")
-0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-
-[sub_resource type="TileSet" id="TileSet_828d7"]
-physics_layer_0/collision_layer = 1
-sources/2 = SubResource("TileSetAtlasSource_c3sxu")
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v1ci3"]
-texture = ExtResource("4_to0dd")
-0:0/size_in_atlas = Vector2i(2, 2)
-0:0/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_6i67t"]
-sources/0 = SubResource("TileSetAtlasSource_v1ci3")
 
 [sub_resource type="Animation" id="Animation_aatsp"]
 length = 0.001
@@ -95,23 +75,13 @@ _data = {
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tx1ys"]
 
-[node name="Level1" type="Node2D" unique_id=2116533260]
-script = ExtResource("1_etgjv")
-_jsonDictionary = "res://ui/dialog/dialogs/intro.json"
+[node name="Level2" type="Node2D" unique_id=2116533260]
+script = ExtResource("1_2xai0")
 
-[node name="Level1Map" type="Node2D" parent="." unique_id=163271074]
-
-[node name="Path" type="TileMapLayer" parent="Level1Map" unique_id=510984633]
-position = Vector2(-1, 0)
-tile_set = SubResource("TileSet_w1627")
-
-[node name="Ground" type="TileMapLayer" parent="Level1Map" unique_id=1173943992]
-tile_set = SubResource("TileSet_828d7")
-
-[node name="Rocks" type="TileMapLayer" parent="Level1Map" unique_id=1919477487]
-tile_set = SubResource("TileSet_6i67t")
+[node name="Level2Map" parent="." unique_id=809194459 instance=ExtResource("2_db1li")]
 
 [node name="Fabiano" parent="." unique_id=1240929559 instance=ExtResource("6_owuyq")]
+position = Vector2(-22, -12)
 _move_speed = 0.01
 
 [node name="Sprite" parent="Fabiano" index="0" unique_id=204840225]
@@ -119,6 +89,9 @@ position = Vector2(0, 0)
 
 [node name="Camera2D" parent="Fabiano" index="3" unique_id=2115678668]
 offset = Vector2(0, 128)
+
+[node name="Label" parent="Fabiano/pickupLayer" parent_id_path=PackedInt32Array(1240929559, 365148536) index="0" unique_id=1849160400]
+text = "Presione \"E\" para Interagir"
 
 [node name="DialogLayer" type="CanvasLayer" parent="." unique_id=1695856468]
 layer = 2

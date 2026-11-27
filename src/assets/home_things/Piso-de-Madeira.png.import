@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dw5q6i7xxtom1"
-valid=false
+uid="uid://c3cw7qj5daklv"
+path="res://.godot/imported/piso-de-madeira.png-83fd8aa8cf6e8e737c80eb477e0b9d35.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://assets/home_things/Piso-de-Madeira.png"
+source_file="res://assets/home_things/piso-de-madeira.png"
+dest_files=["res://.godot/imported/piso-de-madeira.png-83fd8aa8cf6e8e737c80eb477e0b9d35.ctex"]
 
 [params]
 
