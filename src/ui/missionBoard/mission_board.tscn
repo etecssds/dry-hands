@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dfcyp5og723n6" path="res://ui/missionBoard/mission.gd" id="1_ns1ib"]
 [ext_resource type="Texture2D" uid="uid://bbr8iotd2o6ol" path="res://assets/ui/frames/frame4.png" id="2_rimwu"]
 [ext_resource type="FontFile" uid="uid://c4rmkl7snscsp" path="res://assets/fonts/dry-fountain-regular.ttf" id="3_i777i"]
+[ext_resource type="PackedScene" uid="uid://cm5g7yuqp6ghe" path="res://ui/missionBoard/credit.tscn" id="4_rimwu"]
 
 [node name="MissionBoard" type="Control" unique_id=679219356]
 layout_mode = 3
@@ -48,27 +49,26 @@ layout_mode = 2
 offset_transform_enabled = true
 offset_transform_position = Vector2(5, 0)
 
-[node name="mission1" type="RichTextLabel" parent="NinePatchRect/ScrollContainer/level2" unique_id=1108078403]
+[node name="mission1" type="RichTextLabel" parent="NinePatchRect/ScrollContainer/level2" unique_id=356619611]
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("3_i777i")
 theme_override_font_sizes/normal_font_size = 8
-bbcode_enabled = true
-text = "Missão 1 – Vigiar os animais: percorra uma parte da fazenda e verifique se todos os animais estão no lugar.
-"
+text = "Missão 2 - Verificar as cercas:  Encontrar pontos danificados nas cercas e avise a familia."
 fit_content = true
 
-[node name="mission2" type="RichTextLabel" parent="NinePatchRect/ScrollContainer/level2" unique_id=356619611]
+[node name="mission2" type="RichTextLabel" parent="NinePatchRect/ScrollContainer/level2" unique_id=169193671]
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("3_i777i")
 theme_override_font_sizes/normal_font_size = 8
-text = "Missão 2 - Verificar as cercas:  Encontrar pontos danificados nas cercas e avise Fabiano."
+text = "Missão 2 - Verificar as cercas:  Encontrar pontos danificados nas cercas e avise a familia."
 fit_content = true
 
-[node name="mission3" type="RichTextLabel" parent="NinePatchRect/ScrollContainer/level2" unique_id=1432820047]
+[node name="complete" type="RichTextLabel" parent="NinePatchRect/ScrollContainer/level2" unique_id=1432820047]
+visible = false
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("3_i777i")
-theme_override_font_sizes/normal_font_size = 8
-text = "Missão 3 - Ajudar na plantação:  Acompanhe a família durante os cuidados com a plantação."
+theme_override_font_sizes/normal_font_size = 12
+text = "Volte para casa e descance"
 fit_content = true
 
 [node name="level1" type="VBoxContainer" parent="NinePatchRect/ScrollContainer" unique_id=1423356435]
@@ -92,3 +92,5 @@ text = " Missão 1 -
  ajudar durante a
  longa viagem"
 fit_content = true
+
+[node name="credits" parent="." unique_id=1482979907 instance=ExtResource("4_rimwu")]

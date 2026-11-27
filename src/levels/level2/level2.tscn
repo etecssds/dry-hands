@@ -6,7 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://cl2fk5q11iwns" path="res://characters/svitoria/svitoria.tscn" id="6_owuyq"]
 [ext_resource type="PackedScene" uid="uid://pge00srplj6d" path="res://ui/vida/vidaFome.tscn" id="9_gxe0j"]
 [ext_resource type="PackedScene" uid="uid://cprc8snmswyeh" path="res://ui/inventory_sistem/inventoryUI.tscn" id="10_ubl52"]
+[ext_resource type="Texture2D" uid="uid://dyb707nggicf4" path="res://assets/home_things/casa.png" id="10_yrnt5"]
 [ext_resource type="Texture2D" uid="uid://2ruyrbrhefrc" path="res://assets/mobileIcons/seta.png" id="11_6e0tt"]
+[ext_resource type="Texture2D" uid="uid://chasu4higvm6c" path="res://assets/home_things/terra arada.png" id="11_fy6x2"]
+[ext_resource type="PackedScene" uid="uid://cm5g7yuqp6ghe" path="res://ui/missionBoard/credit.tscn" id="12_fy6x2"]
 [ext_resource type="Texture2D" uid="uid://57va5acqgpg8" path="res://assets/mobileIcons/acao.png" id="12_xdwvg"]
 [ext_resource type="Texture2D" uid="uid://dd18oq5hpsjbh" path="res://assets/mobileIcons/pause.png" id="13_kqusp"]
 
@@ -72,13 +75,19 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6i67t"]
+size = Vector2(36.5, 37.5)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tx1ys"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1gegw"]
+size = Vector2(50, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_13wuy"]
+size = Vector2(85, 38)
 
 [node name="Level2" type="Node2D" unique_id=2116533260]
 script = ExtResource("1_2xai0")
 
 [node name="Level2Map" parent="." unique_id=809194459 instance=ExtResource("2_db1li")]
+z_index = -2
 
 [node name="Fabiano" parent="." unique_id=1240929559 instance=ExtResource("6_owuyq")]
 position = Vector2(-22, -12)
@@ -157,19 +166,113 @@ visibility_mode = 1
 [node name="Cutscene" type="AnimationPlayer" parent="." unique_id=1452212369]
 libraries/ = SubResource("AnimationLibrary_tysf0")
 
-[node name="Mission1" type="Area2D" parent="." unique_id=1845243959]
+[node name="casa" type="Sprite2D" parent="." unique_id=1897674155]
+position = Vector2(10.75, -251.125)
+scale = Vector2(2.8164063, 2.8164063)
+texture = ExtResource("10_yrnt5")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Mission1" unique_id=1554054071]
+[node name="terras_aradas_1" type="Sprite2D" parent="." unique_id=315035479]
+visible = false
+z_index = -1
+position = Vector2(-585, 40.00003)
+rotation = 1.5707964
+texture = ExtResource("11_fy6x2")
+flip_h = true
+
+[node name="1" type="Sprite2D" parent="terras_aradas_1" unique_id=1693319804]
+z_index = -1
+position = Vector2(-3.0517578e-05, -16)
+texture = ExtResource("11_fy6x2")
+flip_h = true
+
+[node name="terras_aradas_2" type="Sprite2D" parent="." unique_id=704167198]
+visible = false
+z_index = -1
+position = Vector2(-649, 120)
+rotation = 1.5707964
+texture = ExtResource("11_fy6x2")
+
+[node name="Sprite2D7" type="Sprite2D" parent="terras_aradas_2" unique_id=389958404]
+z_index = -1
+position = Vector2(0, 16)
+texture = ExtResource("11_fy6x2")
+
+[node name="terras_aradas_3" type="Sprite2D" parent="." unique_id=1594670893]
+visible = false
+z_index = -1
+position = Vector2(-553, 88)
+rotation = 1.5707964
+texture = ExtResource("11_fy6x2")
+
+[node name="Sprite2D5" type="Sprite2D" parent="terras_aradas_3" unique_id=389246708]
+z_index = -1
+position = Vector2(0, 16)
+texture = ExtResource("11_fy6x2")
+
+[node name="Mission_1_1" type="Area2D" parent="." unique_id=1773392051]
+position = Vector2(-138, -152)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Mission_1_1" unique_id=740431119]
+position = Vector2(-2, -195)
 shape = SubResource("RectangleShape2D_6i67t")
 
-[node name="Mission2" type="Area2D" parent="." unique_id=1137492392]
+[node name="Mission_1_2" type="Area2D" parent="." unique_id=1294733097]
+position = Vector2(-138, -152)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Mission2" unique_id=1811269683]
-shape = SubResource("RectangleShape2D_tx1ys")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mission_1_2" unique_id=1554054071]
+position = Vector2(245, -1)
+shape = SubResource("RectangleShape2D_6i67t")
 
-[node name="Mission3" type="Area2D" parent="." unique_id=1716199804]
+[node name="Mission_1_3" type="Area2D" parent="." unique_id=1845243959]
+position = Vector2(-138, -152)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Mission3" unique_id=1242538202]
-shape = SubResource("RectangleShape2D_tx1ys")
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Mission_1_3" unique_id=1975362726]
+position = Vector2(294, -143)
+shape = SubResource("RectangleShape2D_6i67t")
+
+[node name="Mission_2_1" type="Area2D" parent="." unique_id=1137492392]
+position = Vector2(6, -153)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mission_2_1" unique_id=2013576316]
+position = Vector2(-585, 192)
+shape = SubResource("RectangleShape2D_1gegw")
+
+[node name="Mission_2_2" type="Area2D" parent="." unique_id=1521915460]
+position = Vector2(-91, -122)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mission_2_2" unique_id=1987433010]
+position = Vector2(-567, 241)
+shape = SubResource("RectangleShape2D_1gegw")
+
+[node name="Mission_2_3" type="Area2D" parent="." unique_id=1837985753]
+position = Vector2(98, -185)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mission_2_3" unique_id=1020097949]
+position = Vector2(-660, 273)
+shape = SubResource("RectangleShape2D_1gegw")
+
+[node name="House" type="Area2D" parent="." unique_id=1716199804]
+position = Vector2(148, -153)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="House" unique_id=1625513628]
+position = Vector2(-141, -24)
+shape = SubResource("RectangleShape2D_13wuy")
+
+[node name="credits" parent="." unique_id=1482979907 instance=ExtResource("12_fy6x2")]
+top_level = true
+
+[connection signal="body_entered" from="Mission_1_1" to="SceneLayer/MissionBoard" method="_on_mission_1_1_body_entered"]
+[connection signal="body_exited" from="Mission_1_1" to="SceneLayer/MissionBoard" method="_on_mission_1_1_body_exited"]
+[connection signal="body_entered" from="Mission_1_2" to="SceneLayer/MissionBoard" method="_on_mission_1_2_body_entered"]
+[connection signal="body_exited" from="Mission_1_2" to="SceneLayer/MissionBoard" method="_on_mission_1_2_body_exited"]
+[connection signal="body_entered" from="Mission_1_3" to="SceneLayer/MissionBoard" method="_on_mission_1_3_body_entered"]
+[connection signal="body_exited" from="Mission_1_3" to="SceneLayer/MissionBoard" method="_on_mission_1_3_body_exited"]
+[connection signal="body_entered" from="Mission_2_1" to="SceneLayer/MissionBoard" method="_on_mission_2_1_body_entered"]
+[connection signal="body_exited" from="Mission_2_1" to="SceneLayer/MissionBoard" method="_on_mission_2_1_body_exited"]
+[connection signal="body_entered" from="Mission_2_2" to="SceneLayer/MissionBoard" method="_on_mission_2_2_body_entered"]
+[connection signal="body_exited" from="Mission_2_2" to="SceneLayer/MissionBoard" method="_on_mission_2_2_body_exited"]
+[connection signal="body_entered" from="Mission_2_3" to="SceneLayer/MissionBoard" method="_on_mission_2_3_body_entered"]
+[connection signal="body_exited" from="Mission_2_3" to="SceneLayer/MissionBoard" method="_on_mission_2_3_body_exited"]
+[connection signal="body_entered" from="House" to="SceneLayer/MissionBoard" method="_on_house_body_entered"]
 
 [editable path="Fabiano"]

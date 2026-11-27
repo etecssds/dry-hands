@@ -5,11 +5,14 @@ extends Node
 var vidaFomeNode: Node = null
 var inventory: Array = []
 var characterNode: Node = null
+var Finisher = false
+var change_scene = false
 
 signal inventoryUpdate
 signal dialogOpened
 signal dialogCLosed
 signal playerDied
+
 
 func _ready() -> void:
 	restart_inventory()
