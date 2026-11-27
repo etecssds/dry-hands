@@ -18,10 +18,10 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -105.0
-offset_top = 15.0
-offset_right = -15.0
-offset_bottom = 85.0
+offset_left = -90.0
+offset_top = 25.0
+offset_right = -10.0
+offset_bottom = 95.0
 grow_horizontal = 0
 texture = ExtResource("2_rimwu")
 region_rect = Rect2(0, 0, 16, 16)
@@ -40,14 +40,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="NinePatchRect/ScrollContainer" unique_id=1453484374]
+[node name="level2" type="VBoxContainer" parent="NinePatchRect/ScrollContainer" unique_id=1453484374]
+visible = false
 custom_minimum_size = Vector2(75, -1)
 custom_maximum_size = Vector2(75, -1)
 layout_mode = 2
 offset_transform_enabled = true
 offset_transform_position = Vector2(5, 0)
 
-[node name="mission1" type="RichTextLabel" parent="NinePatchRect/ScrollContainer/VBoxContainer" unique_id=1108078403]
+[node name="mission1" type="RichTextLabel" parent="NinePatchRect/ScrollContainer/level2" unique_id=1108078403]
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("3_i777i")
 theme_override_font_sizes/normal_font_size = 8
@@ -56,16 +57,38 @@ text = "Missão 1 – Vigiar os animais: percorra uma parte da fazenda e verifiq
 "
 fit_content = true
 
-[node name="mission2" type="RichTextLabel" parent="NinePatchRect/ScrollContainer/VBoxContainer" unique_id=356619611]
+[node name="mission2" type="RichTextLabel" parent="NinePatchRect/ScrollContainer/level2" unique_id=356619611]
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("3_i777i")
 theme_override_font_sizes/normal_font_size = 8
-text = "Missão 2 - Verificar as cercas: o jogador deve encontrar pontos danificados nas cercas e avisar Fabiano."
+text = "Missão 2 - Verificar as cercas:  Encontrar pontos danificados nas cercas e avise Fabiano."
 fit_content = true
 
-[node name="mission3" type="RichTextLabel" parent="NinePatchRect/ScrollContainer/VBoxContainer" unique_id=1432820047]
+[node name="mission3" type="RichTextLabel" parent="NinePatchRect/ScrollContainer/level2" unique_id=1432820047]
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("3_i777i")
 theme_override_font_sizes/normal_font_size = 8
-text = "Missão 3 - Ajudar na plantação: Baleia acompanha a família durante os cuidados com a plantação. Após concluir as tarefas, a família retorna para casa."
+text = "Missão 3 - Ajudar na plantação:  Acompanhe a família durante os cuidados com a plantação."
+fit_content = true
+
+[node name="level1" type="VBoxContainer" parent="NinePatchRect/ScrollContainer" unique_id=1423356435]
+custom_minimum_size = Vector2(75, -1)
+custom_maximum_size = Vector2(75, -1)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 6
+offset_transform_enabled = true
+offset_transform_position = Vector2(5, 0)
+
+[node name="mission1" type="RichTextLabel" parent="NinePatchRect/ScrollContainer/level1" unique_id=129800694]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("3_i777i")
+theme_override_font_sizes/normal_font_size = 11
+bbcode_enabled = true
+text = " Missão 1 - 
+ Siga a familia,
+ encontre e colete
+ recursos para
+ ajudar durante a
+ longa viagem"
 fit_content = true

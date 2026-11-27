@@ -2,7 +2,6 @@ class_name BaseLevel
 extends Node2D
 
 @export_category("Dialog")
-@export_file("*.json") var _jsonDictionary: String
 
 @onready var DialogLayer: CanvasLayer = $DialogLayer
 @onready var PauseMenuLayer: CanvasLayer = $PauseMenuLayer
@@ -40,3 +39,4 @@ func open_dialog(_jsonDictionary = "res://ui/dialog/dialogs/intro.json"):
 func restart():
 	GlobalInventory.restart_inventory()
 	get_tree().reload_current_scene()
+	

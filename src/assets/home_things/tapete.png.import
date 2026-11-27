@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bl3jm5ct5r0si"
-valid=false
+uid="uid://bfwww2gxto6k6"
+path="res://.godot/imported/tapete.png-fdc406fc9e338092a045f7666afbfdc3.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://assets/home_things/mesa-casa.png"
+source_file="res://assets/home_things/tapete.png"
+dest_files=["res://.godot/imported/tapete.png-fdc406fc9e338092a045f7666afbfdc3.ctex"]
 
 [params]
 

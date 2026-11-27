@@ -3,7 +3,7 @@
 [ext_resource type="Theme" uid="uid://bysvkw6b1cmyg" path="res://ui/ui_theme.tres" id="1_w2r0d"]
 [ext_resource type="Script" uid="uid://dhqlecnqiwn28" path="res://ui/main_menu/main_menu.gd" id="2_4e78x"]
 [ext_resource type="Texture2D" uid="uid://dys1j1xuhetiq" path="res://assets/ground.png" id="3_s4pem"]
-[ext_resource type="Texture2D" uid="uid://dneinntia14cc" path="res://assets/ui/hands.png" id="4_xio0d"]
+[ext_resource type="Texture2D" uid="uid://dl20v3veaarpo" path="res://assets/ui/hands.png" id="4_xio0d"]
 [ext_resource type="LabelSettings" uid="uid://bw3ow7if1qx7t" path="res://ui/main_menu/title_label.tres" id="5_tf5ef"]
 [ext_resource type="Texture2D" uid="uid://d1xdeu1wrym1i" path="res://assets/ui/frames/menu_container.png" id="6_qao3l"]
 [ext_resource type="Texture2D" uid="uid://6buh1nsjesoq" path="res://assets/ui/credits/credits.png" id="7_tf5ef"]
@@ -234,7 +234,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 6
 texture = ExtResource("4_xio0d")
 expand_mode = 1
-stretch_mode = 5
+stretch_mode = 3
 
 [node name="Title" type="Label" parent="LogoMenuVBox/BigLogo" unique_id=340960107]
 layout_mode = 1

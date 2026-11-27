@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bp4gtsek4gewd"
-valid=false
+uid="uid://boi0yi8akx03b"
+path="res://.godot/imported/mesa.png-7a8a30c224519338084f881fa979f4e0.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://assets/home_things/fogueira.png"
+source_file="res://assets/home_things/mesa.png"
+dest_files=["res://.godot/imported/mesa.png-7a8a30c224519338084f881fa979f4e0.ctex"]
 
 [params]
 
