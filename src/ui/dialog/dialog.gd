@@ -16,7 +16,7 @@ func _ready() -> void:
 	if not data.is_empty():
 		_initializeDialog()
 		GlobalInventory.dialogOpened.emit()
-		GlobalInventory.characterNode._can_move = false
+		GlobalInventory.characterNode.can_move = false
 
 
 func _input(event: InputEvent) -> void:
@@ -31,7 +31,7 @@ func _input(event: InputEvent) -> void:
 			if id == "end":
 				queue_free()
 				GlobalInventory.dialogCLosed.emit()
-				GlobalInventory.characterNode._can_move = true
+				GlobalInventory.characterNode.can_move = true
 				return
 			_initializeDialog()
 

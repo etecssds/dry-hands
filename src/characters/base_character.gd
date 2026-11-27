@@ -72,9 +72,7 @@ func _animate() -> void:
 				_sprite2D.flip_h = true
 			_anim_dir = 2 # side
 	else:
-		if _anim_dir == 0:
-			_animation.play("idle_down")
-		if _anim_dir == 1:
-			_animation.play("idle_up")
-		if _anim_dir == 2:
-			_animation.play("idle_side")
+		match _anim_dir:
+			0: _animation.play("idle_down")
+			1: _animation.play("idle_up")
+			2: _animation.play("idle_side")

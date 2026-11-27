@@ -20,6 +20,7 @@ config/icon="uid://be2766cq3on6f"
 [autoload]
 
 GlobalInventory="*uid://c4s6b46lh63ha"
+Pathfind="*uid://simngr5h4s4m"
 
 [display]
 

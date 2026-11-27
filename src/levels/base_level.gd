@@ -14,6 +14,7 @@ var _PauseMenu: PauseMenu
 
 func _ready() -> void:
 	GlobalInventory.playerDied.connect(restart)
+	Pathfind.setup_grid([$Level1Map/Ground, $Level1Map/Rocks])
 	$Cutscene.play("intro")
 
 
