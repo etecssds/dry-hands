@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://cm5g7yuqp6ghe"]
+
+[ext_resource type="Script" uid="uid://b430o7ckt5shd" path="res://ui/missionBoard/credit.gd" id="1_aaik0"]
+[ext_resource type="FontFile" uid="uid://i3itppdqun3j" path="res://assets/fonts/Not Jam Chunky Sans 9.ttf" id="1_d3cnr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_km80v"]
+font = ExtResource("1_d3cnr")
+font_size = 18
+font_color = Color(0.9137255, 0.84313726, 0.69803923, 1)
+shadow_size = 0
+shadow_color = Color(0.49019608, 0.56078434, 0.59607846, 1)
+shadow_offset = Vector2(0, 2)
+
+[sub_resource type="LabelSettings" id="LabelSettings_imgkc"]
+font = ExtResource("1_d3cnr")
+font_size = 6
+font_color = Color(0.9137255, 0.84313726, 0.69803923, 1)
+shadow_size = 0
+shadow_color = Color(0.47843137, 0.54901963, 0.5803922, 1)
+shadow_offset = Vector2(0, 1)
+
+[node name="credits" type="Node2D" unique_id=1482979907]
+script = ExtResource("1_aaik0")
+
+[node name="credt_Layer" type="CanvasLayer" parent="." unique_id=1415225157]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="credt_Layer" unique_id=1912008956]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="credt_Layer/ColorRect" unique_id=1422442350]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 312.0
+offset_bottom = 232.0
+
+[node name="CreditsTitle" type="Label" parent="credt_Layer/ColorRect/VBoxContainer" unique_id=242149843]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "CRÉDITOS"
+label_settings = SubResource("LabelSettings_km80v")
+horizontal_alignment = 1
+
+[node name="Credits" type="Label" parent="credt_Layer/ColorRect/VBoxContainer" unique_id=1797619369]
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+size_flags_vertical = 6
+text = "Este jogo foi produzido com o apoio da Etec de São Sebastião.
+Obra original por Graciliano Ramos
+
+Roteiro:
+Samuell Moreira
+Javé Ferreira
+Heitor Marmo
+Danilo Santana
+
+Programação:
+João Sacchi
+Michael Paiva
+Samuell Moreira
+
+Artes visuais:
+Heitor Marmo Nascimento de Andrade
+Matheus Vinnicius Lima
+Yago Tamashiro
+Arthur Amaral
+Danilo Santana"
+label_settings = SubResource("LabelSettings_imgkc")
+horizontal_alignment = 1
+autowrap_mode = 3

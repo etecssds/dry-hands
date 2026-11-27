@@ -1,7 +1,12 @@
 [gd_scene format=3 uid="uid://dxcmtxgs58d7o"]
 
 [ext_resource type="Script" uid="uid://cjtn30vbdh4ge" path="res://levels/level1/level1.gd" id="1_ddtso"]
+<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://7eq3rpe3dedx" path="res://levels/level1/level_1_map.tscn" id="2_n5g8f"]
+=======
+[ext_resource type="PackedScene" uid="uid://cl2fk5q11iwns" path="res://characters/svitoria/svitoria.tscn" id="2_c6lro"]
+[ext_resource type="PackedScene" uid="uid://bt8rm5gmrnm2k" path="res://levels/level1/level_1_map.tscn" id="2_xc23s"]
+>>>>>>> feature/mapas
 [ext_resource type="PackedScene" uid="uid://m7ciiupo51au" path="res://ui/inventory_sistem/inventoryItem.tscn" id="3_3jy00"]
 [ext_resource type="PackedScene" uid="uid://dfkymkinpeh1c" path="res://characters/fabiano/fabiano.tscn" id="4_xc23s"]
 [ext_resource type="Texture2D" uid="uid://bgekf5gkp0kkd" path="res://characters/baleia/baleia.png" id="5_v1ci3"]
@@ -130,15 +135,19 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6i67t"]
-size = Vector2(80.60715, 50.884594)
+size = Vector2(93.55477, 70.80436)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lo6bu"]
-size = Vector2(1481, 343.5)
+size = Vector2(1481, 368.75)
 
 [node name="Level1" type="Node2D" unique_id=2116533260]
 script = ExtResource("1_ddtso")
 
+<<<<<<< HEAD
 [node name="Level1Map" parent="." unique_id=1781057165 instance=ExtResource("2_n5g8f")]
+=======
+[node name="Level1Map" parent="." unique_id=1781057165 instance=ExtResource("2_xc23s")]
+>>>>>>> feature/mapas
 
 [node name="items" type="Node2D" parent="." unique_id=832553318]
 
@@ -499,7 +508,7 @@ shape = SubResource("RectangleShape2D_lo6bu")
 [node name="introArea" type="Area2D" parent="." unique_id=518280295]
 
 [node name="intro" type="CollisionShape2D" parent="introArea" unique_id=1658430473]
-position = Vector2(-14, 379)
+position = Vector2(-14, 391.625)
 shape = SubResource("RectangleShape2D_lo6bu")
 
 [node name="Line2D" type="Line2D" parent="." unique_id=1434896540]
