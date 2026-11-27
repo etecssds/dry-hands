@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://cl2fk5q11iwns"]
+[gd_scene format=3 uid="uid://dfkymkinpeh1c"]
 
-[ext_resource type="PackedScene" uid="uid://b0jaggxkwbusd" path="res://characters/base_character.tscn" id="1_55lds"]
-[ext_resource type="Texture2D" uid="uid://dy63skkyjtgkl" path="res://characters/fabiano/fabiano.png" id="2_2da6j"]
+[ext_resource type="PackedScene" uid="uid://b0jaggxkwbusd" path="res://characters/base_character.tscn" id="1_qgn0x"]
+[ext_resource type="Texture2D" uid="uid://dy63skkyjtgkl" path="res://characters/fabiano/fabiano.png" id="2_86se8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5xh0r"]
 radius = 4.0
@@ -142,12 +142,12 @@ _data = {
 &"walk_up": SubResource("Animation_ic326")
 }
 
-[node name="Fabiano" unique_id=1240929559 instance=ExtResource("1_55lds")]
+[node name="Fabiano" unique_id=1240929559 instance=ExtResource("1_qgn0x")]
 _move_speed = 0.1
 
 [node name="Sprite" parent="." index="0" unique_id=204840225]
 position = Vector2(0, 0)
-texture = ExtResource("2_2da6j")
+texture = ExtResource("2_86se8")
 hframes = 4
 vframes = 3
 
@@ -159,3 +159,5 @@ shape = SubResource("CapsuleShape2D_5xh0r")
 [node name="Animation" parent="." index="2" unique_id=549782095]
 libraries/ = SubResource("AnimationLibrary_qenwo")
 autoplay = &"idle_down"
+
+[node name="Camera2D" type="Camera2D" parent="." index="3" unique_id=861524593]

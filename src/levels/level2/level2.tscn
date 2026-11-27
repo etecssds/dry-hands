@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://2f1jxqoa2lnp" path="res://ui/missionBoard/mission_board.tscn" id="5_0q4fe"]
 [ext_resource type="PackedScene" uid="uid://cl2fk5q11iwns" path="res://characters/svitoria/svitoria.tscn" id="6_owuyq"]
 [ext_resource type="PackedScene" uid="uid://pge00srplj6d" path="res://ui/vida/vidaFome.tscn" id="9_gxe0j"]
+[ext_resource type="AudioStream" uid="uid://gb07n6v1slif" path="res://assets/music/level2.ogg" id="10_2xai0"]
 [ext_resource type="PackedScene" uid="uid://cprc8snmswyeh" path="res://ui/inventory_sistem/inventoryUI.tscn" id="10_ubl52"]
 [ext_resource type="Texture2D" uid="uid://2ruyrbrhefrc" path="res://assets/mobileIcons/seta.png" id="11_6e0tt"]
 [ext_resource type="Texture2D" uid="uid://57va5acqgpg8" path="res://assets/mobileIcons/acao.png" id="12_xdwvg"]
@@ -82,13 +83,9 @@ script = ExtResource("1_2xai0")
 
 [node name="Fabiano" parent="." unique_id=1240929559 instance=ExtResource("6_owuyq")]
 position = Vector2(-22, -12)
-_move_speed = 0.01
 
 [node name="Sprite" parent="Fabiano" index="0" unique_id=204840225]
 position = Vector2(0, 0)
-
-[node name="Camera2D" parent="Fabiano" index="3" unique_id=2115678668]
-offset = Vector2(0, 128)
 
 [node name="Label" parent="Fabiano/pickupLayer" parent_id_path=PackedInt32Array(1240929559, 365148536) index="0" unique_id=1849160400]
 text = "Presione \"E\" para Interagir"
@@ -171,5 +168,10 @@ shape = SubResource("RectangleShape2D_tx1ys")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mission3" unique_id=1242538202]
 shape = SubResource("RectangleShape2D_tx1ys")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1483732936]
+stream = ExtResource("10_2xai0")
+autoplay = true
+parameters/looping = true
 
 [editable path="Fabiano"]

@@ -1,18 +1,24 @@
 [gd_scene format=3 uid="uid://dxcmtxgs58d7o"]
 
 [ext_resource type="Script" uid="uid://cjtn30vbdh4ge" path="res://levels/level1/level1.gd" id="1_ddtso"]
-[ext_resource type="PackedScene" uid="uid://cl2fk5q11iwns" path="res://characters/svitoria/svitoria.tscn" id="2_c6lro"]
-[ext_resource type="PackedScene" uid="uid://87j0psgqno3s" path="res://levels/level1/level_1_map.res" id="2_f7y8c"]
+[ext_resource type="PackedScene" uid="uid://7eq3rpe3dedx" path="res://levels/level1/level_1_map.tscn" id="2_n5g8f"]
 [ext_resource type="PackedScene" uid="uid://m7ciiupo51au" path="res://ui/inventory_sistem/inventoryItem.tscn" id="3_3jy00"]
+[ext_resource type="PackedScene" uid="uid://dfkymkinpeh1c" path="res://characters/fabiano/fabiano.tscn" id="4_xc23s"]
+[ext_resource type="Texture2D" uid="uid://bgekf5gkp0kkd" path="res://characters/baleia/baleia.png" id="5_v1ci3"]
 [ext_resource type="FontFile" uid="uid://i3itppdqun3j" path="res://assets/fonts/Not Jam Chunky Sans 9.ttf" id="6_3jy00"]
+[ext_resource type="PackedScene" uid="uid://cl2fk5q11iwns" path="res://characters/svitoria/svitoria.tscn" id="6_5i4kv"]
+[ext_resource type="Texture2D" uid="uid://da5xiq2p43jwo" path="res://characters/crianca1/crianca1.png" id="6_ghnt0"]
 [ext_resource type="Theme" uid="uid://bysvkw6b1cmyg" path="res://ui/ui_theme.tres" id="6_tysf0"]
+[ext_resource type="Texture2D" uid="uid://dgktdobt5nrf" path="res://characters/crianca2/crianca2.png" id="7_5i4kv"]
 [ext_resource type="PackedScene" uid="uid://2f1jxqoa2lnp" path="res://ui/missionBoard/mission_board.tscn" id="7_f7y8c"]
+[ext_resource type="Texture2D" uid="uid://dy2rpap7sj2do" path="res://characters/svitoria/svitoria2.png" id="8_ghnt0"]
 [ext_resource type="PackedScene" uid="uid://cprc8snmswyeh" path="res://ui/inventory_sistem/inventoryUI.tscn" id="10_jhqhn"]
 [ext_resource type="Texture2D" uid="uid://2ruyrbrhefrc" path="res://assets/mobileIcons/seta.png" id="11_xc23s"]
 [ext_resource type="Texture2D" uid="uid://57va5acqgpg8" path="res://assets/mobileIcons/acao.png" id="12_n5g8f"]
 [ext_resource type="PackedScene" uid="uid://pge00srplj6d" path="res://ui/vida/vidaFome.tscn" id="13_ghnt0"]
 [ext_resource type="Texture2D" uid="uid://dd18oq5hpsjbh" path="res://assets/mobileIcons/pause.png" id="13_qugyr"]
 [ext_resource type="Texture2D" uid="uid://dyb707nggicf4" path="res://assets/home_things/casa.png" id="13_xc23s"]
+[ext_resource type="AudioStream" uid="uid://bihu0dgotlyd2" path="res://assets/music/level1.ogg" id="19_5i4kv"]
 
 [sub_resource type="Animation" id="Animation_aatsp"]
 length = 0.001
@@ -132,7 +138,7 @@ size = Vector2(1481, 343.5)
 [node name="Level1" type="Node2D" unique_id=2116533260]
 script = ExtResource("1_ddtso")
 
-[node name="Level1Map" parent="." unique_id=1781057165 instance=ExtResource("2_f7y8c")]
+[node name="Level1Map" parent="." unique_id=1781057165 instance=ExtResource("2_n5g8f")]
 
 [node name="items" type="Node2D" parent="." unique_id=832553318]
 
@@ -328,23 +334,48 @@ itemName = "Mandioca"
 position = Vector2(-553, -168)
 itemName = "Mandioca"
 
-[node name="Fabiano" parent="." unique_id=1240929559 instance=ExtResource("2_c6lro")]
+[node name="Baleia" parent="." unique_id=1240929559 node_paths=PackedStringArray("player_node") instance=ExtResource("6_5i4kv")]
+position = Vector2(24, 416)
+player_node = NodePath("../Fabiano")
+
+[node name="Sprite" parent="Baleia" index="0" unique_id=204840225]
+texture = ExtResource("5_v1ci3")
+
+[node name="Crianca1" parent="." unique_id=563152560 node_paths=PackedStringArray("player_node") instance=ExtResource("6_5i4kv")]
+position = Vector2(-8, 416)
+player_node = NodePath("../Fabiano")
+
+[node name="Sprite" parent="Crianca1" index="0" unique_id=204840225]
+texture = ExtResource("6_ghnt0")
+
+[node name="Crianca2" parent="." unique_id=1637778035 node_paths=PackedStringArray("player_node") instance=ExtResource("6_5i4kv")]
+position = Vector2(-24, 416)
+player_node = NodePath("../Fabiano")
+
+[node name="Sprite" parent="Crianca2" index="0" unique_id=204840225]
+texture = ExtResource("7_5i4kv")
+
+[node name="SVitoria" parent="." unique_id=1295854294 node_paths=PackedStringArray("player_node") instance=ExtResource("6_5i4kv")]
+position = Vector2(8, 416)
+player_node = NodePath("../Fabiano")
+
+[node name="Sprite" parent="SVitoria" index="0" unique_id=204840225]
+texture = ExtResource("8_ghnt0")
+
+[node name="Fabiano" parent="." unique_id=1660940110 instance=ExtResource("4_xc23s")]
 position = Vector2(8, 454)
 _move_speed = 0.01
 
-[node name="Sprite" parent="Fabiano" index="0" unique_id=204840225]
-position = Vector2(0, 0)
-
-[node name="Camera2D" parent="Fabiano" index="3" unique_id=2115678668]
+[node name="Camera2D" parent="Fabiano" index="3" unique_id=861524593]
 offset = Vector2(0, 128)
 
 [node name="ControlHintLayer" type="CanvasLayer" parent="." unique_id=1601280334]
 follow_viewport_enabled = true
 
 [node name="ControlHint" type="ColorRect" parent="ControlHintLayer" unique_id=927372465]
-offset_left = -95.0
+offset_left = -136.0
 offset_top = 392.0
-offset_right = -15.0
+offset_right = -56.0
 offset_bottom = 432.0
 color = Color(0.19215687, 0.15686275, 0.12941177, 1)
 
@@ -471,9 +502,21 @@ shape = SubResource("RectangleShape2D_lo6bu")
 position = Vector2(-14, 379)
 shape = SubResource("RectangleShape2D_lo6bu")
 
+[node name="Line2D" type="Line2D" parent="." unique_id=1434896540]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=717888496]
+stream = ExtResource("19_5i4kv")
+autoplay = true
+parameters/looping = false
+
 [connection signal="body_entered" from="Sprite2D/level2Transition" to="." method="_on_level_2_transition_body_entered"]
 [connection signal="body_entered" from="esperançaArea2" to="." method="_on_esperança_area_2_body_entered"]
 [connection signal="body_entered" from="sofrimentoArea" to="." method="_on_sofrimento_area_body_entered"]
 [connection signal="body_exited" from="introArea" to="." method="_on_intro_area_body_exited"]
 
+[editable path="Level1Map"]
+[editable path="Baleia"]
+[editable path="Crianca1"]
+[editable path="Crianca2"]
+[editable path="SVitoria"]
 [editable path="Fabiano"]

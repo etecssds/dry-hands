@@ -15,9 +15,12 @@ var _direction: Vector2
 var _moving: bool
 var _grid_size: int = 16
 
+signal player_did_a_move
 
-func  _ready() -> void:
+
+func _ready() -> void:
 	GlobalInventory.set_character_reference(self)
+
 
 func _physics_process(_delta) -> void:
 	if not _can_move:
@@ -50,6 +53,8 @@ func _move() -> void:
 			tween.set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
 			tween.tween_property(self, "position", position + _direction * _grid_size, _move_speed)
 			tween.tween_callback(_not_moving)
+			
+			emit_signal("player_did_a_move")
 
 
 func _not_moving() -> void:
