@@ -3,9 +3,8 @@
 [ext_resource type="Script" uid="uid://cuf1ceukmbyju" path="res://characters/base_character.gd" id="1_f78fl"]
 [ext_resource type="FontFile" uid="uid://c4rmkl7snscsp" path="res://assets/fonts/dry-fountain-regular.ttf" id="2_xeerb"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xeerb"]
-radius = 3.0
-height = 12.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xeerb"]
+size = Vector2(19.5, 20)
 
 [sub_resource type="LabelSettings" id="LabelSettings_lo6bu"]
 font = ExtResource("2_xeerb")
@@ -17,10 +16,10 @@ script = ExtResource("1_f78fl")
 [node name="Sprite" type="Sprite2D" parent="." unique_id=204840225]
 position = Vector2(0, -8)
 
-[node name="Collision" type="CollisionShape2D" parent="." unique_id=1242892702]
-show_behind_parent = true
-rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_xeerb")
+[node name="Collision2" type="CollisionShape2D" parent="." unique_id=887703541]
+position = Vector2(0, -5.684342e-14)
+rotation = -3.1415925
+shape = SubResource("RectangleShape2D_xeerb")
 
 [node name="Animation" type="AnimationPlayer" parent="." unique_id=549782095]
 

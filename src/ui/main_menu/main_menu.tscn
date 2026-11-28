@@ -237,6 +237,10 @@ autoplay = &"fade_in"
 [node name="Credits" parent="." unique_id=2107521517 instance=ExtResource("11_xio0d")]
 layout_mode = 0
 anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1079052234]
 stream = ExtResource("14_qao3l")
@@ -244,6 +248,7 @@ volume_db = -5.0
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=1008159204]
 stream = ExtResource("15_lknku")
+volume_db = -20.0
 autoplay = true
 parameters/looping = true
 

@@ -1,13 +1,5 @@
-<<<<<<< HEAD
 [gd_scene format=3 uid="uid://7eq3rpe3dedx"]
 
 [ext_resource type="PackedScene" uid="uid://87j0psgqno3s" path="res://levels/level1/level_1_map.res" id="1_537ma"]
 
 [node name="Level1Map" unique_id=1781057165 instance=ExtResource("1_537ma")]
-=======
-[gd_scene format=3 uid="uid://bt8rm5gmrnm2k"]
-
-[ext_resource type="PackedScene" uid="uid://87j0psgqno3s" path="res://levels/level1/level_1_map.res" id="1_ajlm8"]
-
-[node name="Level1Map" unique_id=1781057165 instance=ExtResource("1_ajlm8")]
->>>>>>> feature/mapas

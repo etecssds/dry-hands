@@ -258,6 +258,12 @@ shape = SubResource("RectangleShape2D_13wuy")
 [node name="credits" parent="." unique_id=1482979907 instance=ExtResource("12_fy6x2")]
 top_level = true
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1483732936]
+stream = ExtResource("10_2xai0")
+volume_db = -20.0
+autoplay = true
+parameters/looping = true
+
 [connection signal="body_entered" from="Mission_1_1" to="SceneLayer/MissionBoard" method="_on_mission_1_1_body_entered"]
 [connection signal="body_exited" from="Mission_1_1" to="SceneLayer/MissionBoard" method="_on_mission_1_1_body_exited"]
 [connection signal="body_entered" from="Mission_1_2" to="SceneLayer/MissionBoard" method="_on_mission_1_2_body_entered"]
@@ -271,10 +277,5 @@ top_level = true
 [connection signal="body_entered" from="Mission_2_3" to="SceneLayer/MissionBoard" method="_on_mission_2_3_body_entered"]
 [connection signal="body_exited" from="Mission_2_3" to="SceneLayer/MissionBoard" method="_on_mission_2_3_body_exited"]
 [connection signal="body_entered" from="House" to="SceneLayer/MissionBoard" method="_on_house_body_entered"]
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1483732936]
-stream = ExtResource("10_2xai0")
-autoplay = true
-parameters/looping = true
 
 [editable path="Fabiano"]

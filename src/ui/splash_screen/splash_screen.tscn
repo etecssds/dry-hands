@@ -149,6 +149,7 @@ autoplay = &"splash"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1044457630]
 stream = ExtResource("4_x5q7k")
+volume_db = -20.0
 autoplay = true
 parameters/looping = true
 
